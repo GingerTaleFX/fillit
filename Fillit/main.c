@@ -6,89 +6,92 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/10/28 15:05:49 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/10/28 19:31:38 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-s_tetro	*new_tetro(int x, int y)
+int check_tetramino(char *src)
 {
-	s_tetro	*n_tetro;
+	const char *tetramins[21] = { "1110\n0100\n0000\n0000\n\0",
+ 						"1000\n1100\n1000\n0000\n\0",
+ 						"0100\n1110\n0000\n0000\n\0",
+ 						"0100\n1100\n0100\n0000\n\0",
+ 						"1100\n1100\n0000\n0000\n\0",
+ 						"1111\n0000\n0000\n0000\n\0",
+ 						"1000\n1000\n1000\n1000\n\0",
+ 						"1100\n1000\n1000\n0000\n\0",
+ 						"1110\n0010\n0000\n0000\n\0",
+ 						"1100\n0100\n0100\n0000\n\0",
+ 						"1000\n1110\n0000\n0000\n\0",
+ 						"0100\n0100\n1100\n0000\n\0",
+ 						"1000\n1000\n1100\n0000\n\0",
+ 						"0010\n1110\n0000\n0000\n\0",
+ 						"1110\n1000\n0000\n0000\n\0",
+ 						"0110\n1100\n0000\n0000\n\0",
+ 						"1000\n1100\n0100\n0000\n\0",
+ 						"1100\n0110\n0000\n0000\n\0",
+ 						"0100\n1100\n1000\n0000\n\0"};
+	int	i;
 
-	n_tetro = (s_tetro *)malloc(sizeof(s_tetro));
-	n_tetro->x = x;
-	n_tetro->y = y;
-	n_tetro->next = NULL;
-	return(n_tetro);
+	i = -1;
+	while (++i < 19)
+		if (ft_strcmp(tetramins[i], src) == 0)
+			return (1);
+	return (0);
 }
-s_tetro *save_tetri(char *str)
+
+char *move_tetro(char *src)
 {
-	s_tetro	*new;
-	s_tetro *tmp;
+	char *dst;
 	int i;
 	int j;
 
-	j = 0;
 	i = 0;
-	tmp = new_tetro(j, i);
-	new - tmp;
-	while (str[i] != '\0')
+	j = 0;
+	if (src[0] == '1')
+		return (src);
+	dst = ft_strnew(ft_strlen(src));
+	while (src[i] != '1')
+		i++;
+	while (src[i] != '\0')
 	{
-		while (str[j] != '\n')
-		{
-			if (str[j] == '#')
-			{
-				if (tmp == NULL)
-					tmp = new_tetro(j, i);
-				tmp = tmp->next;
-			}
-			j++;
-		}
+		if (src[i] == '1' || src[i] == '0')
+			dst[j++] = src[i];
+		if ((j + 1) % 5 == 0)
+			dst[j++] = '\n';
 		i++;
 	}
-	return (new);
-}
-
-// ####
-// ....
-// ....
-// ....
-int check_tetro(s_tetro *tetro)
-{
-	s_tetro *tmp;
-
-	tmp = tetro;
-		if (tmp->x == 0 && tmp->y == 0)
-		{
-			tmp = tmp->next;
-			if (tmp->x == 1 && tmp->y == 0)
-			{
-				tmp = tmp->next;
-				if (tmp->x == 2 && tmp->y == 0)
-				{
-					tmp = tmp->next;
-					if (tmp->x == 3 && tmp->y == 0)
-					{
-						tmp = tmp->next;
-						if (tmp->x == 4 && tmp->y == 0)
-							return (1);
-					}
-				}
-			}
-		}
-	return (0);
+	while (j < i)
+		dst[j++] = (!((j + 1) % 5)) ? '\n' : '0';
+	dst[j] = '\0';
+	printf("dst\n%s", dst);
+	return (dst);
 }
 
 int work_with_tetri(char *content)
 {
-	s_tetro	*new;
+	char *tmp;
+	int i;
 
-	new = save_tetri(content);
-	if((check_tetro(new)))
-		return (1);
-	else
+	i = 0;
+	tmp = ft_strnew(ft_strlen(content));
+	while (content[i] != '\0')
+	{
+		if (content[i] == '.')
+			tmp[i] = '0';
+		else if (content[i] == '#')
+			tmp[i] = '1';
+		else
+			tmp[i] = content[i];
+		i++;
+	}
+	printf("tmp\n%s", tmp);
+	tmp = move_tetro(tmp);
+	if (!(check_tetramino(tmp)))
 		return (0);
+	return (1);
 }
 
 int is_it_square(char **arr)
@@ -146,16 +149,16 @@ int main(int ac, char **av) {
 	int fd;
 	int i;
 
-	av[1] = "test_1.txt";
+	av[1] = "testi_1.txt";
 	ac = 2;
 	i = 1;
 	if (ac > 1)
 	{
 		fd = open(av[i],O_RDONLY);
 		if (!(is_valid(fd)))
-			ft_putstr ("It's not a square");
+			ft_putstr ("It's not a square and not a tetramine");
 		else
-			ft_putstr ("it's a square");
+			ft_putstr ("it's a square and right tetramin");
 
 	}
 	return (0);
