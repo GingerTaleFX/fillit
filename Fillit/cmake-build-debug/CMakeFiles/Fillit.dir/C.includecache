@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kroselin/CLionProjects/Fillit/fillit.h
+stdio.h
+-
+libft/libft.h
+/Users/kroselin/CLionProjects/Fillit/libft/libft.h
+sys/types.h
+-
+unistd.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+
+/Users/kroselin/CLionProjects/Fillit/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+
+/Users/kroselin/CLionProjects/Fillit/main.c
+fillit.h
+/Users/kroselin/CLionProjects/Fillit/fillit.h
+
