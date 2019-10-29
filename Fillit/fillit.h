@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/10/28 14:46:48 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/10/29 13:25:32 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@
 #include "libft/libft.h"
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdint.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #define BUFF_SIZE 21
+#define LEFT (uint64_t)34952 /* 1000 1000 1000 1000 */
+#define TOP (uint64_t)61440 /* 1111 0000 0000 0000 */
 
 typedef struct		t_tetro
 {
@@ -30,6 +33,7 @@ typedef struct		t_tetro
 
 }					s_tetro;
 
-
+char		**ft_strsplit(char const *s, char c);
+int			ft_count_mass(char const *s, char c);
 
 #endif
