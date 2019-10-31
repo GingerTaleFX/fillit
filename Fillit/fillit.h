@@ -40,5 +40,7 @@ uint64_t    move_tetro(uint64_t tmp);
 int         work_with_tetri(char *content);
 int         is_it_square(char **arr);
 int         is_valid(int fd);
+void		ft_strrev(char *s);
+char		*ft_print_bit(int n);
 
 #endif
