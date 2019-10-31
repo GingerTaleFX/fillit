@@ -22,6 +22,10 @@ sys/stat.h
 fcntl.h
 -
 
+/Users/kroselin/CLionProjects/home/Fillit/is_valid.c
+fillit.h
+/Users/kroselin/CLionProjects/home/Fillit/fillit.h
+
 /Users/kroselin/CLionProjects/home/Fillit/libft/libft.h
 string.h
 -

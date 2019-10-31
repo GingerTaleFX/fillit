@@ -95,6 +95,9 @@
 		<Unit filename="/Users/kroselin/CLionProjects/home/Fillit/fillit.h">
 			<Option target="Fillit"/>
 		</Unit>
+		<Unit filename="/Users/kroselin/CLionProjects/home/Fillit/is_valid.c">
+			<Option target="Fillit"/>
+		</Unit>
 		<Unit filename="/Users/kroselin/CLionProjects/home/Fillit/libft/ft_atoi.c">
 			<Option target="Fillit"/>
 		</Unit>
