@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/10/31 12:53:26 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/10/31 12:53:49 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(int ac, char **av) {
 			ft_putstr ("It's not a square/tetramine.\n");
 		else
 			ft_putstr ("it's a square and right tetramin.\n");
+
 
 	}
 	return (0);
