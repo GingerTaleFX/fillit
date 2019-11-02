@@ -60,6 +60,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Fillit.dir/libft/ft_tolower.c.o"
   "CMakeFiles/Fillit.dir/libft/ft_toupper.c.o"
   "CMakeFiles/Fillit.dir/main.c.o"
+  "CMakeFiles/Fillit.dir/is_valid.c.o"
   "Fillit.pdb"
   "Fillit"
 )

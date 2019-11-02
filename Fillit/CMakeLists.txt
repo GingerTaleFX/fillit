@@ -89,4 +89,5 @@ add_executable(Fillit
         tests/valid/test_6.txt
         tests/valid/test_7.txt
         fillit.h
-        main.c)
+        main.c
+        is_valid.c)
