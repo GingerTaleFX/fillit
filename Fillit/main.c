@@ -21,7 +21,11 @@ int main(int ac, char **av) {
 	i = 1;
 	if (ac == 2)
 	{
+<<<<<<< HEAD
 		fd = open(av[i],O_RDONLY);
+=======
+		fd = open(av[i], O_RDONLY);
+>>>>>>> master
 		if (fd < 0)
 			ft_putstr("No file with such name.\n");
 		if (!(is_valid(fd)))
