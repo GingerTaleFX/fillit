@@ -189,3 +189,11 @@ CMakeFiles/Fillit.dir/main.c.o: ../fillit.h
 CMakeFiles/Fillit.dir/main.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/main.c.o: ../main.c
 
+CMakeFiles/Fillit.dir/print.c.o: ../fillit.h
+CMakeFiles/Fillit.dir/print.c.o: ../libft/libft.h
+CMakeFiles/Fillit.dir/print.c.o: ../print.c
+
+CMakeFiles/Fillit.dir/tetra.c.o: ../fillit.h
+CMakeFiles/Fillit.dir/tetra.c.o: ../libft/libft.h
+CMakeFiles/Fillit.dir/tetra.c.o: ../tetra.c
+

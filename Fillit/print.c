@@ -38,7 +38,7 @@ char		*ft_print_bit(int n)
 	int		nb;
 	int		len;
 	char	*str;
-	int		i;s
+	int		i;
 
 	nb = n;
 	len = 1;

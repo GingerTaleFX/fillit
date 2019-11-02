@@ -6,9 +6,11 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/10/31 12:32:42 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/02 14:23:59 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft/libft.h"
 #include "fillit.h"
 
 int check_tetramino(uint64_t src)
@@ -36,10 +38,10 @@ uint64_t move_tetro(uint64_t tmp)
     return (tmp);
 }
 
-int work_with_tetri(char *content)
+int work_with_tetri(char *content, t_etra *tetrases, char c)
 {
-    uint64_t tmp;
-    int j;
+    uint64_t	tmp;
+    int			j;
 
     j = 15;
     tmp = 0;
@@ -52,10 +54,10 @@ int work_with_tetri(char *content)
         j--;
         content++;
     }
-//	printf("tmp\n%s", tmp);
     tmp = move_tetro(tmp);
     if (!(check_tetramino(tmp)))
         return (0);
+    ft_add_tetra(tetrases++, tmp, c);
     return (1);
 }
 
@@ -83,29 +85,27 @@ int is_it_square(char **arr)
         j = 0;
         i++;
     }
-    if (i != 4)
+    if (i != 4 || (x != 4 || y != 12))
         return (0);
-    if (x != 4 || y != 12)
-        return (0);
-    else
-        return (1);
+    return (1);
 }
 
-int is_valid(int fd)
+int	is_valid(int fd, t_etra *tetrases)
 {
     char	buf[BUFF_SIZE + 1];
     char	**arr;
     int		ret;
+    int 	i;
 
+    i = 65;
     while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
     {
         buf[ret] = '\0';
         arr = ft_strsplit(buf, '\n');
-        if (!(is_it_square(arr)))
+        if (!(is_it_square(arr)) || !(work_with_tetri(buf, tetrases, (char)i)))
             return (0);
-        if (!(work_with_tetri(buf)))
-            return (0);
+        i++;
     }
-//    free(arr);
+//  	free(arr);
     return (1);
 }
