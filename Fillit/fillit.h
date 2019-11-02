@@ -43,4 +43,8 @@ int         is_valid(int fd);
 void		ft_strrev(char *s);
 char		*ft_print_bit(int n);
 
+<<<<<<< HEAD
 #endif
+=======
+#endif
+>>>>>>> master
