@@ -37,6 +37,8 @@ fcntl.h
 -
 
 /Users/mdirect/Desktop/Fillit/Fillit/main.c
+libft/libft.h
+/Users/mdirect/Desktop/Fillit/Fillit/libft/libft.h
 fillit.h
 /Users/mdirect/Desktop/Fillit/Fillit/fillit.h
 
