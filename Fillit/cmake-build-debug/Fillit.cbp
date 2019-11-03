@@ -338,9 +338,6 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_7.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tetra.c">
-			<Option target="Fillit"/>
-		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

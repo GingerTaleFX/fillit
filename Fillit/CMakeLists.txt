@@ -92,4 +92,4 @@ add_executable(Fillit
         main.c
         is_valid.c
         print.c
-        tetra.c)
+        )

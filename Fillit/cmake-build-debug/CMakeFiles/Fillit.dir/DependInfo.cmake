@@ -67,7 +67,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_toupper.c" "/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles/Fillit.dir/libft/ft_toupper.c.o"
   "/Users/mdirect/Desktop/Fillit/Fillit/main.c" "/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles/Fillit.dir/main.c.o"
   "/Users/mdirect/Desktop/Fillit/Fillit/print.c" "/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles/Fillit.dir/print.c.o"
-  "/Users/mdirect/Desktop/Fillit/Fillit/tetra.c" "/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles/Fillit.dir/tetra.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

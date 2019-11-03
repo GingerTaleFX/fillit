@@ -1824,33 +1824,6 @@ print.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/print.c.s
 .PHONY : print.c.s
 
-tetra.o: tetra.c.o
-
-.PHONY : tetra.o
-
-# target to build an object file
-tetra.c.o:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetra.c.o
-.PHONY : tetra.c.o
-
-tetra.i: tetra.c.i
-
-.PHONY : tetra.i
-
-# target to preprocess a source file
-tetra.c.i:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetra.c.i
-.PHONY : tetra.c.i
-
-tetra.s: tetra.c.s
-
-.PHONY : tetra.s
-
-# target to generate assembly for a file
-tetra.c.s:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetra.c.s
-.PHONY : tetra.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2049,9 +2022,6 @@ help:
 	@echo "... print.o"
 	@echo "... print.i"
 	@echo "... print.s"
-	@echo "... tetra.o"
-	@echo "... tetra.i"
-	@echo "... tetra.s"
 .PHONY : help
 
 

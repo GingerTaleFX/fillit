@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/02 14:23:59 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/03 16:19:28 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ uint64_t move_tetro(uint64_t tmp)
     return (tmp);
 }
 
-int work_with_tetri(char *content, t_etra *tetrases, char c)
+uint64_t work_with_tetri(char *content)
 {
     uint64_t	tmp;
     int			j;
@@ -57,8 +57,7 @@ int work_with_tetri(char *content, t_etra *tetrases, char c)
     tmp = move_tetro(tmp);
     if (!(check_tetramino(tmp)))
         return (0);
-    ft_add_tetra(tetrases++, tmp, c);
-    return (1);
+    return (tmp);
 }
 
 int is_it_square(char **arr)
@@ -90,19 +89,19 @@ int is_it_square(char **arr)
     return (1);
 }
 
-int	is_valid(int fd, t_etra *tetrases)
+int	is_valid(int fd, uint64_t **t)
 {
     char	buf[BUFF_SIZE + 1];
     char	**arr;
     int		ret;
     int 	i;
 
-    i = 65;
+    i = 0;
     while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
     {
         buf[ret] = '\0';
         arr = ft_strsplit(buf, '\n');
-        if (!(is_it_square(arr)) || !(work_with_tetri(buf, tetrases, (char)i)))
+        if (!(is_it_square(arr)) || !((*t)[i] = work_with_tetri(buf)))
             return (0);
         i++;
     }
