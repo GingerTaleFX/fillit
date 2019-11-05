@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/10/31 12:32:42 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:10:01 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,5 @@ typedef struct		t_tetro
 
 char		**ft_strsplit(char const *s, char c);
 int			ft_count_mass(char const *s, char c);
-int         check_tetramino(uint64_t src);
-uint64_t    move_tetro(uint64_t tmp);
-int         work_with_tetri(char *content);
-int         is_it_square(char **arr);
-int         is_valid(int fd);
 
 #endif
