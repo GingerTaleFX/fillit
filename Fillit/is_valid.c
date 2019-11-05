@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/03 16:19:28 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/05 11:31:08 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,11 +100,14 @@ int	is_valid(int fd, uint64_t **t)
     while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
     {
         buf[ret] = '\0';
-        arr = ft_strsplit(buf, '\n');
+        if (!(arr = ft_strsplit(buf, '\n')))
+        {
+            free(arr);
+            return (0);
+        }
         if (!(is_it_square(arr)) || !((*t)[i] = work_with_tetri(buf)))
             return (0);
         i++;
     }
-//  	free(arr);
     return (1);
 }
