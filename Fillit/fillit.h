@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/06 13:38:14 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/06 16:34:01 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #define BUFF_SIZE 21
-#define LEFT (uint64_t)34952 /* 1000 1000 1000 1000 */
-#define TOP (uint64_t)61440 /* 1111 0000 0000 0000 */
+#define LEFT (unsigned short int)34952 /* 1000 1000 1000 1000 */
+#define TOP (unsigned short int)61440 /* 1111 0000 0000 0000 */
 
 char		**ft_strsplit(char const *s, char c);
 int			ft_count_mass(char const *s, char c);

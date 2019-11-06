@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/06 16:06:18 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/06 16:21:08 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,43 @@ uint64_t count_lines(uint64_t *tetra)
 		return (0);
 }
 
+/*
+ * Корректно не работает. move_in_map должен двигать тетраминку №2 по полю тетраминки №1 и возвращать заплненный кусок поля или 0 для увеличения поля
+ * Пока что есть просто поле №1, в которое вкорчивается все
+ * */
+
+//uint64_t	fill_by_zero(uint64_t tmp, uint64_t x, int y)
+//{
+//	while (x >= 0)
+//	{
+//		tmp = 0;
+//		if (x % y == 0)
+//			tmp = '\n';
+//		x--;
+//	}
+//	return (tmp);
+//}
+//{
+//	int i;
+//
+//	i = 15;
+//	while (i >= 0) {
+//		if ((n & (1 << i)) == 0)
+//			write(1, ".", 1);
+//		else if ((n & (1 << i)) != 0)
+//			write(1, "#", 1);
+//		if (i % 4 == 0)
+//			write(1, "\n", 1);
+//		i--;
+//	}
+//	write(1, "\n", 1);
+//}
+
 uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 {
 	while ((tmp & (1 << x))== 0 && x)
 		x /= y;
-	if (x == 0 && (tetra & 1) == 0)
+	if (x == 0 && (tetra & 1) == 0 && (tmp & tetra) == 0)
 		tetra >>= 1;
 	else if (x != 0)
 		tetra >>= y;
@@ -62,6 +94,7 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 
 	i = -1;
 	x = (y * y) - y;
+//	tmp = fill_by_zero(tmp, x, y);
 	tmp = tetra[0];
 	while (tetra[++i])
 	{
