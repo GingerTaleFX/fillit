@@ -6,55 +6,38 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/05 12:42:53 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/07 15:32:49 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "fillit.h"
 
-void		ft_strrev(char *s)
+void	ft_print_bit(uint64_t n, int x, int y)
 {
-	size_t	i;
-	size_t	n;
-	char	c;
+	int i;
+	int tmp;
 
-	if (!s)
-		return ;
-	n = ft_strlen(s) - 1;
-	i = 0;
-	while (i < n)
+	i = x + y;
+	while ((n & (1 << i)) == 0)
+		i--;
+	tmp = i;
+	while (i > 0) {
+		if ((n & (1 << i)) == 0)
+			write(1, ".", 1);
+		else if ((n & (1 << i)) != 0)
+			write(1, "#", 1);
+		if ((i - 1) % y == 0)
+			write(1, "\n", 1);
+		i--;
+	}
+	i = tmp;
+	while (i < (x + y))
 	{
-		c = s[i];
-		s[i] = s[n];
-		s[n] = c;
+		write(1, ".", 1);
 		i++;
-		n--;
+		if (i % y == 0)
+			write(1, "\n", 1);
 	}
-}
-
-char		*ft_print_bit(int n)
-{
-	int		nb;
-	int		len;
-	char	*str;
-	int		i;
-
-	nb = n;
-	len = 1;
-	while (nb / 2)
-	{
-		len++;
-		nb = nb / 2;
-	}
-	str = ft_strnew(len);
-	i = 0;
-	while (i < len)
-	{
-
-		str[i++] = (n % 2) ? '#' : '.';
-		n = n / 2;
-	}
-	ft_strrev(str);
-	return (str);
+	write(1, "\n", 1);
 }
