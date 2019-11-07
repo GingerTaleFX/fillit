@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/07 15:07:51 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/07 15:09:02 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ uint64_t    work_with_tetri(char *content);
 int         is_it_square(char **arr);
 int			is_valid(int fd, uint64_t **t);
 //void		ft_strrev(char *s);
-void	ft_print_bit(uint64_t n, int x, int y);
+void	ft_print_bit(uint64_t n, int x, int y, char letter);
 
 
 #endif

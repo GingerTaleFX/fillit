@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/07 15:32:49 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:11:38 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 /* We shorted code, but now it works correctly only with maps 5x5
  * i don't know, how to change this*/
 
-void	ft_print_bit(uint64_t n, int x, int y)
+void	ft_print_bit(uint64_t n, int x, int y, char letter)
 {
 	int i;
 	int tmp;
+	int counter;
 
+	counter = 0;
 	i = x + y;
 	while ((n & (1 << i)) == 0)
 		i--;
@@ -29,9 +31,14 @@ void	ft_print_bit(uint64_t n, int x, int y)
 		if ((n & (1 << i)) == 0)
 			write(1, ".", 1);
 		else if ((n & (1 << i)) != 0)
-			write(1, "#", 1);
-		if ((i - 1) % y == 0)
-			write(1, "\n", 1);
+		{
+			ft_putchar(letter);
+			counter++;
+		}
+		if (counter % 4 == 0)
+			letter++;
+//		if ((i - 1) % y == 0)
+//			write(1, "\n", 1);
 		i--;
 	}
 	i = tmp;
@@ -39,8 +46,8 @@ void	ft_print_bit(uint64_t n, int x, int y)
 	{
 		write(1, ".", 1);
 		i++;
-		if (i % y == 0)
-			write(1, "\n", 1);
+//		if (i % y == 0)
+//			write(1, "\n", 1);
 	}
 	write(1, "\n", 1);
 }

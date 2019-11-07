@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/07 15:34:51 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:22:48 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,9 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 	int			i;
 	uint64_t	x;
 	uint64_t 	tmp;
+	char		letter;
 
-
+	letter = 'A';
 	i = -1;
 	x = (y * y) - y;
 	tmp = 0;
@@ -108,7 +109,8 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 		}
 		else
 			tmp |= tetra[i];
-		ft_print_bit(tmp, x, y);
+		ft_print_bit(tmp, x, y, letter);
+//		letter++;
 	}
 	return (tmp);
 }
