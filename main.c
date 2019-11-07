@@ -79,6 +79,13 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 	return (tmp | tetra);
 }
 
+/*
+ * we get massive of tetraminos and the number of lines in our map.
+ * then we find, how many peace should be in it - x.
+ * x = (y * y) - y is necessary for test, but i change some things.
+ * first tetro places in tmp, then we take second one and tries to put it in the map - move_in_map
+ * */
+
 uint64_t place_in_map(uint64_t *tetra, int y)
 {
 	int			i;

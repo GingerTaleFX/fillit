@@ -13,6 +13,9 @@
 #include "libft/libft.h"
 #include "fillit.h"
 
+/* We shorted code, but now it works correctly only with maps 5x5
+ * i don't know, how to change this*/
+
 void	ft_print_bit(uint64_t n, int x, int y)
 {
 	int i;
