@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/07 16:11:38 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/08 11:48:40 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_print_bit(uint64_t n, int x, int y, char letter)
 {
 	int i;
 	int tmp;
-	int counter;
+	char l;
 
-	counter = 0;
+	l = letter;
 	i = x + y;
 	while ((n & (1 << i)) == 0)
 		i--;
@@ -32,11 +32,8 @@ void	ft_print_bit(uint64_t n, int x, int y, char letter)
 			write(1, ".", 1);
 		else if ((n & (1 << i)) != 0)
 		{
-			ft_putchar(letter);
-			counter++;
+			ft_putchar('#');
 		}
-		if (counter % 4 == 0)
-			letter++;
 //		if ((i - 1) % y == 0)
 //			write(1, "\n", 1);
 		i--;

@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/07 16:22:48 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/08 11:59:01 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,27 +45,80 @@ uint64_t count_lines(uint64_t *tetra)
 }
 
 /*
- * Не работает. move_in_map должен двигать тетраминку №2 по полю тетраминки №1 и возвращать заплненный кусок поля или 0 для увеличения поля
- * Пока что есть просто поле №1, в которое вкорчивается все
+ * Checks the number of tetra elements after first movving. If there are less then 4, the map will be bigger and the func of placing will repeat.
  * */
-
-uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
+int	check_tetra_in_map(uint64_t tetra)
 {
-	int	l;
+	int max;
+
+	max = 0;
+	while (tetra)
+	{ tetra = tetra & (tetra - 1);
+		max++;
+	}
+	return (max);
+}
+/*
+ * Repeats the move of tetro in map*
+ */
+uint64_t	repeat_move(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
+{
+	int l;
 
 	l = x + y;
-	tmp <<= (x/y);
-	tetra <<= (x/y);
+
 	while (l)
 	{
 		while ((tmp & tetra) != 0)
 		{
 			tetra >>= 1;
 			l--;
-			if (l % y == 0)
-				tetra >>= y;
+//			if (l % y == 0)
+//				tetra >>= y - 1;
 		}
 		l--;
+	}
+	return (tetra);
+}
+
+/*
+ * Here is a mass, i hope, we will make a normal func from it. So, we take tetro and tries to put it in the map. Then we check, how many peaces of actual tetramin we have (check_tetra_in_map)
+ * we must have 4 peace, or make map bigger. If tetro doesn't take its place, we get from rem its params, move map for a size of Y (tmp <<= (x/y)). For example:
+ * 1111 0000 0000 0000
+ * << y (y = 4)
+ * 1111 0000 0000 0000 0000
+ *
+ * and repeat_move - i don't know, how to make recursive, cause
+ * "repeat" do the same part of move_in_map.
+ *
+ * The func works, it fills the map and do it correctly, make its bigger, when it's necessary. But! It doesn't search smallest way for tetros.
+ * I hope, u will do it)*/
+
+uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
+{
+	int	l;
+	uint64_t rem;
+
+	rem = tetra;
+	l = x + y;
+	while (l)
+	{
+		while ((tmp & tetra) != 0)
+		{
+			tetra >>= 1;
+			l--;
+//			if (l % y == 0)
+//				tetra >>= y - 1;
+		}
+		l--;
+	}
+
+	if ((check_tetra_in_map(tetra)) != 4)
+	{
+		tetra = rem;
+		tmp <<= (x/y);
+		tetra = repeat_move(tmp, tetra, x, y);
+		move_in_map(tmp, tetra, x, y);
 	}
 
 //	while ((tmp & (1 << x)) == 0 && x)
@@ -84,6 +137,8 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
  * then we find, how many peace should be in it - x.
  * x = (y * y) - y is necessary for test, but i change some things.
  * first tetro places in tmp, then we take second one and tries to put it in the map - move_in_map
+ *
+ * The letter doesn't work! I have'nt imagined yet, how to solve this problem without lists.
  * */
 
 uint64_t place_in_map(uint64_t *tetra, int y)
