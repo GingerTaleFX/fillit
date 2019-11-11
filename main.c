@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/11 13:31:02 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/11 14:49:57 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,10 @@ uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
 {
 	int			i;
 	int			j;
+	int 		c;
 	uint64_t	tmp;
 
+	c = 0;
 	while (*tetra)
 	{
 		i = (counter == 1) ? 4 : y - 1;
@@ -76,17 +78,18 @@ uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
 			while (*tetra) {
 				tmp += (*tetra - ((*tetra >> i) << i)) << (j * (i + 1) + 1);
 				*tetra >>= i;
-				printf("tmp[%d] = %d\n",j, tmp);
+//				printf("tmp[%d] = %d\n",j, tmp);
 				j++;
 			}
 			*tetra = tmp << (i + 1);
 			i++;
 		}
-		printf("tetra = %d\n", *tetra);
+//		printf("tetra = %d\n", *tetra);
 		tetra++;
+		c++;
 	}
 
-	return (tetra);
+	return (tetra - c);
 }
 /*
  * Here is a mass, i hope, we will make a normal func from it. So, we take tetro and tries to put it in the map. Then we check, how many peaces of actual tetramin we have (check_tetra_in_map)
@@ -114,8 +117,8 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 		{
 			tetra >>= 1;
 			l--;
-			if (l % y == 0)
-				tetra >>= y - 1;
+//			if (l % y == 0)
+//				tetra >>= y - 1;
 		}
 		l--;
 	}
@@ -159,9 +162,6 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 	i = -1;
 	x = y * y;
 	tmp = 0;
-	if( y > 4)
-
-	/*здесь будет проверка*/
 	while (tetra[++i])
 	{
 		if ((tmp & tetra[i]) != 0)
@@ -174,7 +174,7 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 		}
 		else
 			tmp |= tetra[i];
-		ft_print_bit(tmp, x, y, letter);
+		ft_print_bit(tmp, x, y);
 //		letter++;
 	}
 	return (tmp);
@@ -206,14 +206,18 @@ int 	main(int ac, char **av)
 	if (close(fd) == -1)
 		return (write(1, "error: close fd\n", 16));
 
+//	i = 0;
+//	while (tetramins[i])
+//		i++;
 	if (!(y = count_lines(tetramins)))
 		ft_putstr ("Too many tetraminos\n");
 	if (y > 4)
 		tetramins = resize_tetras(tetramins, y, 1);
 	map = place_in_map(tetramins, y);
 	i = -1;
-//	while (++i < 26 && tetramins[i])
-//		ft_print_bit(tetramins[i]);
+	while (++i < 26 && tetramins[i])
+//		printf("tet[%c] = %llu\n", i, tetramins[i]);
+		ft_print_bit(tetramins[i],(y * y), y);
 //	ft_print_bit(map);
 
 	free(tetramins);
