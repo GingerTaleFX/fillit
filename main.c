@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/08 11:59:01 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/11 13:31:02 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,34 +53,41 @@ int	check_tetra_in_map(uint64_t tetra)
 
 	max = 0;
 	while (tetra)
-	{ tetra = tetra & (tetra - 1);
+	{
+		tetra = tetra & (tetra - 1);
 		max++;
 	}
 	return (max);
 }
-/*
- * Repeats the move of tetro in map*
- */
-uint64_t	repeat_move(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
+
+uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
 {
-	int l;
+	int			i;
+	int			j;
+	uint64_t	tmp;
 
-	l = x + y;
-
-	while (l)
+	while (*tetra)
 	{
-		while ((tmp & tetra) != 0)
+		i = (counter == 1) ? 4 : y - 1;
+		while(i < y)
 		{
-			tetra >>= 1;
-			l--;
-//			if (l % y == 0)
-//				tetra >>= y - 1;
+			j = 0;
+			tmp = 0;
+			while (*tetra) {
+				tmp += (*tetra - ((*tetra >> i) << i)) << (j * (i + 1) + 1);
+				*tetra >>= i;
+				printf("tmp[%d] = %d\n",j, tmp);
+				j++;
+			}
+			*tetra = tmp << (i + 1);
+			i++;
 		}
-		l--;
+		printf("tetra = %d\n", *tetra);
+		tetra++;
 	}
+
 	return (tetra);
 }
-
 /*
  * Here is a mass, i hope, we will make a normal func from it. So, we take tetro and tries to put it in the map. Then we check, how many peaces of actual tetramin we have (check_tetra_in_map)
  * we must have 4 peace, or make map bigger. If tetro doesn't take its place, we get from rem its params, move map for a size of Y (tmp <<= (x/y)). For example:
@@ -100,15 +107,15 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 	uint64_t rem;
 
 	rem = tetra;
-	l = x + y;
+	l = y * y;
 	while (l)
 	{
 		while ((tmp & tetra) != 0)
 		{
 			tetra >>= 1;
 			l--;
-//			if (l % y == 0)
-//				tetra >>= y - 1;
+			if (l % y == 0)
+				tetra >>= y - 1;
 		}
 		l--;
 	}
@@ -117,8 +124,8 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 	{
 		tetra = rem;
 		tmp <<= (x/y);
-		tetra = repeat_move(tmp, tetra, x, y);
-		move_in_map(tmp, tetra, x, y);
+		tetra <<= (x/y);
+		tetra = move_in_map(tmp, tetra, x, y);
 	}
 
 //	while ((tmp & (1 << x)) == 0 && x)
@@ -150,8 +157,11 @@ uint64_t place_in_map(uint64_t *tetra, int y)
 
 	letter = 'A';
 	i = -1;
-	x = (y * y) - y;
+	x = y * y;
 	tmp = 0;
+	if( y > 4)
+
+	/*здесь будет проверка*/
 	while (tetra[++i])
 	{
 		if ((tmp & tetra[i]) != 0)
@@ -198,6 +208,8 @@ int 	main(int ac, char **av)
 
 	if (!(y = count_lines(tetramins)))
 		ft_putstr ("Too many tetraminos\n");
+	if (y > 4)
+		tetramins = resize_tetras(tetramins, y, 1);
 	map = place_in_map(tetramins, y);
 	i = -1;
 //	while (++i < 26 && tetramins[i])

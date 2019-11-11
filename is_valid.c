@@ -70,7 +70,7 @@ int is_it_square(char **arr)
 	y = 0;
 	i = 0;
 	j = 0;
-	while (arr[i] != '\0')
+	while (arr[i])
 	{
 		while (arr[i][j] != '\0')
 		{
