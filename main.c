@@ -111,6 +111,7 @@ uint64_t move_in_map(uint64_t tmp, uint64_t tetra, uint64_t x, int y)
 
 	rem = tetra;
 	l = y * y;
+	/*где-то здесь должна быть *resize_tetras и tetra должна стать массивом*/
 	while (l)
 	{
 		while ((tmp & tetra) != 0)
