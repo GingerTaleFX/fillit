@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/06 16:34:01 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/14 13:02:15 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #define BUFF_SIZE 21
-#define LEFT (unsigned short int)34952 /* 1000 1000 1000 1000 */
-#define TOP (unsigned short int)61440 /* 1111 0000 0000 0000 */
+#define LEFT (uint64_t)34952 /* 1000 1000 1000 1000 */
+#define TOP (uint64_t)61440 /*  1111 0000 0000 0000 */
 
 char		**ft_strsplit(char const *s, char c);
 int			ft_count_mass(char const *s, char c);
@@ -31,9 +31,12 @@ uint64_t    move_tetro(uint64_t tmp);
 uint64_t    work_with_tetri(char *content);
 int         is_it_square(char **arr);
 int			is_valid(int fd, uint64_t **t);
-//void		ft_strrev(char *s);
-void		ft_print_bit(int n);
-
+void		ft_print_bit(uint64_t n, int x, int y);
+uint64_t	place_in_map(uint64_t *tetra, int *y);
+int			check_tetra_in_map(uint64_t tetra);
+uint64_t	move_in_map(uint64_t map, uint64_t *tetra, uint64_t x);
+uint64_t	*resize_tetras(uint64_t *tetra, int y, int counter);
+uint64_t	count_lines(uint64_t *tetra);
 
 #endif
 

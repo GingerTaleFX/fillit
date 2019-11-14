@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/05 12:25:06 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/07 13:37:07 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
@@ -70,7 +70,7 @@ int is_it_square(char **arr)
 	y = 0;
 	i = 0;
 	j = 0;
-	while (arr[i] != '\0')
+	while (arr[i])
 	{
 		while (arr[i][j] != '\0')
 		{
