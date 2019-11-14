@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/mdirect/Desktop/Fillit/Fillit/. -I/Users/mdirect/Desktop/Fillit/Fillit/libft -I/Users/mdirect/Desktop/Fillit/Fillit/tests -I/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid -I/Users/mdirect/Desktop/Fillit/Fillit/tests/valid 
+C_INCLUDES = -I/Users/mdirect/Desktop/Fillit/. -I/Users/mdirect/Desktop/Fillit/libft -I/Users/mdirect/Desktop/Fillit/tests -I/Users/mdirect/Desktop/Fillit/tests/invalid -I/Users/mdirect/Desktop/Fillit/tests/valid 
 

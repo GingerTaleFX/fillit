@@ -8,47 +8,47 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug"/>
+				<Option working_dir="/Users/mdirect/Desktop/Fillit/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug"/>
+				<Option working_dir="/Users/mdirect/Desktop/Fillit/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug"/>
+				<Option working_dir="/Users/mdirect/Desktop/Fillit/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Fillit">
-				<Option output="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Fillit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug"/>
+				<Option output="/Users/mdirect/Desktop/Fillit/cmake-build-debug/Fillit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mdirect/Desktop/Fillit/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/."/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/libft"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/."/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/libft"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests/invalid"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests/valid"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
@@ -58,24 +58,24 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 Fillit"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 Fillit"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Fillit/fast">
-				<Option output="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Fillit" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug"/>
+				<Option output="/Users/mdirect/Desktop/Fillit/cmake-build-debug/Fillit" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mdirect/Desktop/Fillit/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/."/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/libft"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid"/>
-					<Add directory="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/."/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/libft"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests/invalid"/>
+					<Add directory="/Users/mdirect/Desktop/Fillit/tests/valid"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
@@ -85,260 +85,269 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 Fillit/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 Fillit/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/mdirect/Desktop/Fillit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/fillit.h">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/algos.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/is_valid.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/fillit.h">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_atoi.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/is_valid.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_bzero.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_atoi.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_count_mass.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_bzero.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_isalnum.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_count_mass.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_isalpha.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isalnum.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_isascii.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isalpha.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_isdigit.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isascii.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_isprint.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isdigit.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_itoa.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isprint.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstadd.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_itoa.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstdel.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstadd.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstdelone.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstdel.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstiter.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstdelone.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstmap.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstiter.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_lstnew.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstmap.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memalloc.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstnew.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memccpy.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memalloc.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memchr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memccpy.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memcmp.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memchr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memcpy.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memcmp.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memdel.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memcpy.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memmove.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memdel.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_memset.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memmove.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putchar.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memset.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putchar_fd.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putchar.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putendl.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putchar_fd.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putendl_fd.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putendl.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putnbr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putendl_fd.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putnbr_fd.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putnbr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putstr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putnbr_fd.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_putstr_fd.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putstr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strcat.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putstr_fd.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strchr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strcat.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strclr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strchr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strcmp.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strclr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strcpy.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strcmp.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strdel.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strcpy.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strdup.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strdel.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strequ.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strdup.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_striter.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strequ.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_striteri.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_striter.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strjoin.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_striteri.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strlcat.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strjoin.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strlen.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strlcat.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strmap.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strlen.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strmapi.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strmap.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strncat.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strmapi.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strncmp.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strncat.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strncpy.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strncmp.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strnequ.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strncpy.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strnew.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnequ.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strnlen.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnew.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strnstr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnlen.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strrchr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnstr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strsplit.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strrchr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strstr.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strsplit.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strsub.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strstr.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_strtrim.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strsub.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_tolower.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strtrim.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/ft_toupper.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_tolower.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/libft/libft.h">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_toupper.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/main.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/libft.h">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/print.c">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/main.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_1.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/map.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_2.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/print.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_3.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_1.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_4.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_2.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_5.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_3.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_6.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_4.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_7.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_5.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_8.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_6.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/invalid/testi_9.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_7.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_0.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_8.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_1.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/invalid/testi_9.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_2.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_0.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_3.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_1.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_4.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_2.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_5.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_3.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_6.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_4.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/tests/valid/test_7.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_5.txt">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/Fillit/CMakeLists.txt">
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_6.txt">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tests/valid/test_7.txt">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/tetras.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

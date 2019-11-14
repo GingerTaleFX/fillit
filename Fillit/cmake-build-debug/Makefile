@@ -48,10 +48,10 @@ RM = /Users/mdirect/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdirect/Desktop/Fillit/Fillit
+CMAKE_SOURCE_DIR = /Users/mdirect/Desktop/Fillit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mdirect/Desktop/Fillit/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles /Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdirect/Desktop/Fillit/cmake-build-debug/CMakeFiles /Users/mdirect/Desktop/Fillit/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdirect/Desktop/Fillit/Fillit/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdirect/Desktop/Fillit/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Fillit: cmake_check_build_system
 Fillit/fast:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/build
 .PHONY : Fillit/fast
+
+algos.o: algos.c.o
+
+.PHONY : algos.o
+
+# target to build an object file
+algos.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/algos.c.o
+.PHONY : algos.c.o
+
+algos.i: algos.c.i
+
+.PHONY : algos.i
+
+# target to preprocess a source file
+algos.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/algos.c.i
+.PHONY : algos.c.i
+
+algos.s: algos.c.s
+
+.PHONY : algos.s
+
+# target to generate assembly for a file
+algos.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/algos.c.s
+.PHONY : algos.c.s
 
 is_valid.o: is_valid.c.o
 
@@ -1797,6 +1824,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/main.c.s
 .PHONY : main.c.s
 
+map.o: map.c.o
+
+.PHONY : map.o
+
+# target to build an object file
+map.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/map.c.o
+.PHONY : map.c.o
+
+map.i: map.c.i
+
+.PHONY : map.i
+
+# target to preprocess a source file
+map.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/map.c.i
+.PHONY : map.c.i
+
+map.s: map.c.s
+
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/map.c.s
+.PHONY : map.c.s
+
 print.o: print.c.o
 
 .PHONY : print.o
@@ -1824,6 +1878,33 @@ print.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/print.c.s
 .PHONY : print.c.s
 
+tetras.o: tetras.c.o
+
+.PHONY : tetras.o
+
+# target to build an object file
+tetras.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetras.c.o
+.PHONY : tetras.c.o
+
+tetras.i: tetras.c.i
+
+.PHONY : tetras.i
+
+# target to preprocess a source file
+tetras.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetras.c.i
+.PHONY : tetras.c.i
+
+tetras.s: tetras.c.s
+
+.PHONY : tetras.s
+
+# target to generate assembly for a file
+tetras.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/tetras.c.s
+.PHONY : tetras.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1833,6 +1914,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Fillit"
+	@echo "... algos.o"
+	@echo "... algos.i"
+	@echo "... algos.s"
 	@echo "... is_valid.o"
 	@echo "... is_valid.i"
 	@echo "... is_valid.s"
@@ -2019,9 +2103,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
 	@echo "... print.o"
 	@echo "... print.i"
 	@echo "... print.s"
+	@echo "... tetras.o"
+	@echo "... tetras.i"
+	@echo "... tetras.s"
 .PHONY : help
 
 
