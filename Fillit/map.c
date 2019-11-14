@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:33:46 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 13:07:02 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/14 15:40:15 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,47 +55,60 @@ int	check_tetra_in_map(uint64_t tetra)
  * 4. в случае влезания возвращаем 1
  *
  * */
-uint64_t move_in_map(uint64_t map, uint64_t *tetra, uint64_t x)
+uint64_t move_in_map(uint64_t map, uint64_t *tetra, uint64_t x, int y)
 {
 	uint64_t	rem1;
 	uint64_t	rem2;
-	int			i;
+//	int			i;
 
-	i = 1;
+//	i = x;
 	rem1 = map;
-	rem2 = tetra[i];
-	while (*tetra)
-	{
-		if (rem1 & tetra[i] == 0)
+	rem2 = *tetra;
+
+		while (*tetra)
 		{
-			rem1 |= tetra[i];
-			i++;
-		}
-		else if ((rem1 & tetra[i]) != 0)
-		{
-			tetra[i] >>= 1;
-			move_in_map(rem1, tetra, x);
-			if ((check_tetra_in_map(tetra[i])) != 4)
+			if ((rem1 & *tetra) != 0)
+				break ;
+			else
 			{
-				tetra[i] = rem2;
+				rem1 |= *tetra;
+				tetra++;
+				x = y * y;
+//				break ;
 			}
 		}
-
-	}
-	while (x)
-	{
-		while ((map & tetra[i]) != 0)
+		if(!(*tetra))
+			return (1);
+		if ((rem1 & *tetra) != 0)
 		{
-			tetra[i] >>= 1;
-			x--;
+			if ((*tetra) % 2 == 0)
+			{
+//				x--;
+				if ((x + 1) % y == 0 && (*tetra <<(y *(y -1))) % 2
+					(*tetra)>>= y;
+				else
+				{
+					(*tetra) >>= 1;
+					x--;
+				}
+			}
+			return (move_in_map(rem1, tetra, x, y));
 		}
-		x--;
-	}
-	if (check_tetramino(tetra[i]) == 4)
-		map |= tetra[i];
-	if ((check_tetra_in_map(tetra[i])) != 4)
-		return (0);
-	return (1);
+
+//	while (x)
+//	{
+//		while ((map & tetra[i]) != 0)
+//		{
+//			tetra[i] >>= 1;
+//			x--;
+//		}
+//		x--;
+//	}
+//	if (check_tetramino(tetra[i]) == 4)
+//		map |= tetra[i];
+//	if ((check_tetra_in_map(tetra[i])) != 4)
+//		return (0);
+	return (0);
 }
 
 /*
@@ -120,7 +133,7 @@ uint64_t place_in_map(uint64_t *tetra, int *y)
 	{
 		if ((map & tetra[i]) != 0)
 		{
-			if (!(map = move_in_map(map, tetra, x)))
+			if (!(map = move_in_map(map, tetra + 1, x, *y)))
 			{
 				(*y) = (*y) + 1;
 				tetra = resize_tetras(tetra, (*y), 1);

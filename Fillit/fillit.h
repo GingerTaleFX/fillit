@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 13:02:15 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/14 13:44:04 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int			is_valid(int fd, uint64_t **t);
 void		ft_print_bit(uint64_t n, int x, int y);
 uint64_t	place_in_map(uint64_t *tetra, int *y);
 int			check_tetra_in_map(uint64_t tetra);
-uint64_t	move_in_map(uint64_t map, uint64_t *tetra, uint64_t x);
+uint64_t	move_in_map(uint64_t map, uint64_t *tetra, uint64_t x, int y);
 uint64_t	*resize_tetras(uint64_t *tetra, int y, int counter);
 uint64_t	count_lines(uint64_t *tetra);
 
