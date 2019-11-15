@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/07 13:37:07 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/15 14:45:24 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
@@ -28,12 +28,26 @@ int check_tetramino(uint64_t src)
 	return (0);
 }
 
-uint64_t move_tetro(uint64_t tmp)
+uint64_t move_tetro(uint64_t tmp, int y)
 {
-	while ((LEFT & tmp) == 0)
+	uint64_t	top;
+	uint64_t	left;
+	int			i;
+
+	i = y * y;
+	top = 0;
+	left = 0;
+	while (--i >= 0)
+	{
+		if (i >= y * (y - 1))
+			top |= (1 << i);
+		if (!((i + 1) % y))
+			left |= (1 << i);
+	}
+	while ((left & tmp) == 0)
 		tmp <<= 1;
-	while ((TOP & tmp) == 0)
-		tmp <<= 4;
+	while ((top & tmp) == 0)
+		tmp <<= y;
 	return (tmp);
 }
 
@@ -53,7 +67,7 @@ uint64_t work_with_tetri(char *content)
 		j--;
 		content++;
 	}
-	tmp = move_tetro(tmp);
+	tmp = move_tetro(tmp, 4);
 	if (!(check_tetramino(tmp)))
 		return (0);
 	return (tmp);
@@ -70,20 +84,22 @@ int is_it_square(char **arr)
 	y = 0;
 	i = 0;
 	j = 0;
-	while (arr[i])
+	while (*arr != NULL)
 	{
-		while (arr[i][j] != '\0')
+		while ((*arr)[i] != '\0')
 		{
-			if (arr[i][j] == '#')
+			if ((*arr)[i]  == '#')
 				x++;
-			if (arr[i][j] == '.')
+			if ((*arr)[i]  == '.')
 				y++;
-			j++;
+			if ((*arr)[i]  == '\n')
+				j++;
+			i++;
 		}
-		j = 0;
-		i++;
+		i = 0;
+		arr++;
 	}
-	if (i != 4 || (x != 4 || y != 12))
+	if ((x != 4 || y != 12))
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 11:54:14 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/14 18:49:40 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
 	uint64_t	tmp;
 
 	c = 0;
-	printf("tetras[%d] = %d\n", c, *tetra);
+//	printf("tetras[%d] = %llu\n", c, *tetra);
 	while (*tetra)
 	{
 		i = (counter == 1) ? 4 : y - 1;
@@ -70,7 +70,7 @@ uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
 			*tetra = tmp << (i + 1);
 			i++;
 		}
-		printf("tetras[%d] = %d\n", c, *tetra);
+//		printf("tetras[%d] = %llu\n", c, *tetra);
 		tetra++;
 		c++;
 //		printf("tetras[%d] = %d\n", c, *tetra);

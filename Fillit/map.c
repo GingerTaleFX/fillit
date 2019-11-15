@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:33:46 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 15:40:15 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/14 19:14:33 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ uint64_t move_in_map(uint64_t map, uint64_t *tetra, uint64_t x, int y)
 			if ((*tetra) % 2 == 0)
 			{
 //				x--;
-				if ((x + 1) % y == 0 && (*tetra <<(y *(y -1))) % 2
-					(*tetra)>>= y;
+				if ((x + 1) % y == 0)
+					(*tetra) >>= y;
 				else
 				{
 					(*tetra) >>= 1;
