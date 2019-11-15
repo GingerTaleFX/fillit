@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:04:02 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/15 12:33:29 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/15 14:13:39 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ uint64_t	ft_move(uint64_t tetra, int y)
 		if (i < y)
 			bottom |= (1 << i);
 	}
-	if (!(bottom & tetra))
+//	if (!(bottom & tetra))
 		if (right & tetra)
 		{
 			while ((left & tetra) == 0)
@@ -76,6 +76,7 @@ void		func2(uint64_t *tetra, int *y)
 	{
 		map = 0;
 		*y = *y + 1;
+		tetra = resize_tetras(tetra, *y, 2);
 		i = -1;
 		while (++i < 26 && tetra[i])
 		{
@@ -91,7 +92,8 @@ void		func2(uint64_t *tetra, int *y)
 //			printf("tetra[%d] = %llu\n", i, tetra[i]);
 //			ft_print_bit(tetra[i], (*y) * (*y), *y);
 //		}
-		tetra = resize_tetras(tetra, *y, 2);
+//		*y = *y + 1;
+//		tetra = resize_tetras(tetra, *y, 2);
 	}
 	ft_print_map(tetra, *y);
 }
