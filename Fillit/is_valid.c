@@ -28,12 +28,26 @@ int check_tetramino(uint64_t src)
 	return (0);
 }
 
-uint64_t move_tetro(uint64_t tmp)
+uint64_t move_tetro(uint64_t tmp, int y)
 {
-	while ((LEFT & tmp) == 0)
+	uint64_t	top;
+	uint64_t	left;
+	int			i;
+
+	i = y * y;
+	top = 0;
+	left = 0;
+	while (--i >= 0)
+	{
+		if (i >= y * (y - 1))
+			top |= (1 << i);
+		if (!((i + 1) % y))
+			left |= (1 << i);
+	}
+	while ((left & tmp) == 0)
 		tmp <<= 1;
-	while ((TOP & tmp) == 0)
-		tmp <<= 4;
+	while ((top & tmp) == 0)
+		tmp <<= y;
 	return (tmp);
 }
 
@@ -53,7 +67,7 @@ uint64_t work_with_tetri(char *content)
 		j--;
 		content++;
 	}
-	tmp = move_tetro(tmp);
+	tmp = move_tetro(tmp, 4);
 	if (!(check_tetramino(tmp)))
 		return (0);
 	return (tmp);
