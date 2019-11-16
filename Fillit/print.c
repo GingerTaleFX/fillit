@@ -6,25 +6,23 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/15 14:07:53 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/16 21:45:38 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void	ft_print_bit(uint64_t n, int x, int y)
+void	ft_print_bit(uint64_t n, int y)
 {
-	int i;
+	uint64_t i;
 
-	i = x - 1;
-	while (i >= 0)
+	i = y * y - 1;
+	while (i != UINT64_MAX)
 	{
-		if ((n & (1 << i)) == 0)
+		if (n & ((uint64_t)1 << i))
+			write(1, "#", 1);
+		else
 			write(1, ".", 1);
-		else if ((n & (1 << i)) != 0)
-		{
-			ft_putchar('#');
-		}
 		if (i % y == 0)
 			write(1, "\n", 1);
 		i--;
@@ -34,17 +32,17 @@ void	ft_print_bit(uint64_t n, int x, int y)
 
 void	ft_print_map(uint64_t *tetra, int y)
 {
-	int		i;
+	uint64_t i;
 	int		j;
 	char	letter;
 
 	i = y * y - 1;
-	while (i >= 0)
+	while (i != UINT64_MAX)
 	{
 		j = 0;
 		while (tetra[j])
 		{
-			if ((tetra[j] & (1 << i)))
+			if ((tetra[j] & ((uint64_t)1 << i)))
 			{
 				letter = j + 65;
 				write(1, &letter, 1);

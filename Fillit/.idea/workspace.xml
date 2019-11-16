@@ -80,6 +80,7 @@
       <workItem from="1573739333374" duration="3363000" />
       <workItem from="1573746198174" duration="2421000" />
       <workItem from="1573801664828" duration="10390000" />
+      <workItem from="1573922059625" duration="5666000" />
     </task>
     <servers />
   </component>
@@ -103,32 +104,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>50</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/algos.c</url>
+          <line>72</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/print.c</url>
-          <line>40</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/print.c</url>
-          <line>49</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/is_valid.c</url>
+          <url>file://$PROJECT_DIR$/algos.c</url>
           <line>75</line>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="map &amp; *tetra" language="ObjectiveC" />
-        <watch expression="map | *tetra" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

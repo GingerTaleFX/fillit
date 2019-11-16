@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/15 11:01:52 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/16 21:38:42 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ uint64_t    move_tetro(uint64_t tmp, int y);
 uint64_t    work_with_tetri(char *content);
 int         is_it_square(char **arr);
 int			is_valid(int fd, uint64_t **t);
-void		ft_print_bit(uint64_t n, int x, int y);
+void		ft_print_bit(uint64_t n, int y);
 uint64_t	place_in_map(uint64_t *tetra, int *y);
 int			check_tetra_in_map(uint64_t tetra);
 uint64_t	move_in_map(uint64_t map, uint64_t *tetra, uint64_t x, int y);

@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/15 10:55:43 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/16 21:21:25 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,14 @@ int 	main(int ac, char **av)
 		tetramins = resize_tetras(tetramins, y, 1);
 	func2(tetramins, &y);
 //	map = place_in_map(tetramins, &y);
-	i = -1;
+
+//	i = -1;
 //	while (++i < 26 && tetramins[i])
 //	{
 //		printf("tetra[%d] = %llu\n", i, tetramins[i]);
-//		ft_print_bit(tetramins[i], (y * y), y);
+//		ft_print_bit(tetramins[i], y);
 //	}
+
 	free(tetramins);
 	return (0);
 }

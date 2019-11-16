@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:04:02 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/15 14:13:39 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/16 20:16:41 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,14 @@ uint64_t	ft_move(uint64_t tetra, int y)
 		if (i < y)
 			bottom |= (1 << i);
 	}
-//	if (!(bottom & tetra))
-		if (right & tetra)
-		{
-			while ((left & tetra) == 0)
-				tetra <<= 1;
-			tetra >>= y;
-		}
-		else
-			tetra >>= 1;
+	if ((right & tetra) && (!(bottom & tetra)))
+	{
+		while ((left & tetra) == 0)
+			tetra <<= 1;
+		tetra >>= y;
+	}
+	else
+		tetra >>= 1;
 	return (tetra);
 }
 
@@ -52,16 +51,16 @@ int 		func1(uint64_t map, uint64_t *tetra, int y)
 		if ((map & *tetra) == 0)
 		{
 			map |= *tetra;
-//			ft_print_bit(map, (y * y), y);
+//			ft_print_bit(map, y);
 			return(func1(map, tetra + 1, y));
 		}
 		else
 		{
-			printf("do:\n");
-			ft_print_bit(*tetra, y*y, y);
+//			printf("do:\n");
+//			ft_print_bit(*tetra, y);
 			*tetra = ft_move(*tetra, y);
-			printf("posle:\n");
-			ft_print_bit(*tetra, y*y, y);
+//			printf("posle:\n");
+//			ft_print_bit(*tetra, y);
 		}
 	return (0);
 }
@@ -75,25 +74,11 @@ void		func2(uint64_t *tetra, int *y)
 	while (!(func1(map, tetra, *y)))
 	{
 		map = 0;
-		*y = *y + 1;
-		tetra = resize_tetras(tetra, *y, 2);
 		i = -1;
 		while (++i < 26 && tetra[i])
-		{
-//			printf("do:\n");
-//			ft_print_bit(tetra[i], (*y) * (*y), *y);
 			tetra[i] = move_tetro(tetra[i], *y);
-//			printf("posle:\n");
-//			ft_print_bit(tetra[i], (*y) * (*y), *y);
-		}
-//		i = -1;
-//		while (++i < 26 && tetra[i])
-//		{
-//			printf("tetra[%d] = %llu\n", i, tetra[i]);
-//			ft_print_bit(tetra[i], (*y) * (*y), *y);
-//		}
-//		*y = *y + 1;
-//		tetra = resize_tetras(tetra, *y, 2);
+		*y = *y + 1;
+		tetra = resize_tetras(tetra, *y, 2);
 	}
 	ft_print_map(tetra, *y);
 }
