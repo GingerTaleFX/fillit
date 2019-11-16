@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/15 14:45:24 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/16 22:50:52 by null             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
@@ -73,56 +73,72 @@ uint64_t work_with_tetri(char *content)
 	return (tmp);
 }
 
-int is_it_square(char **arr)
+int correct_chars(char *buf)
 {
 	int i;
-	int j;
-	int x;
-	int y;
-
-	x = 0;
-	y = 0;
-	i = 0;
-	j = 0;
-	while (*arr != NULL)
-	{
-		while ((*arr)[i] != '\0')
-		{
-			if ((*arr)[i]  == '#')
-				x++;
-			if ((*arr)[i]  == '.')
-				y++;
-			if ((*arr)[i]  == '\n')
-				j++;
-			i++;
-		}
-		i = 0;
-		arr++;
-	}
-	if ((x != 4 || y != 12))
-		return (0);
-	return (1);
-}
-
-int	is_valid(int fd, uint64_t **t)
-{
-	char	buf[BUFF_SIZE + 1];
-	char	**arr;
-	int		ret;
-	int 	i;
+	int count;
 
 	i = 0;
-	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+	count = 0;
+	while (i < 19)
 	{
-		buf[ret] = '\0';
-		if (!(arr = ft_strsplit(buf, '\n')))
-		{
-			free(arr);
+		if (buf && buf[i] != '\n' && buf[i] != '.' && buf[i] != '#')
 			return (0);
-		}
-		if (!(is_it_square(arr)) || !((*t)[i] = work_with_tetri(buf)))
+		if (buf[i] == '\n' && !(((i + 1) % 5)== 0))
 			return (0);
+		if (buf[i] == '#')
+			count++;
 		i++;
 	}
+	return (count);
+}
+
+int river_check(char *buf)
+{
+	int i;
+	int count;
+
+	 i = 0;
+	 count = 0;
+	 while (i < 19)
+	 {
+	 	if (buf[i] == '#')
+		{
+			if (i + 1 <= 18 && buf[i + 1] == '#')
+				count++;
+			if (i - 1 >= 0 && buf[i - 1] == '#')
+				count++;
+			if (i + 5 <= 18 && buf[i + 5] == '#')
+				count++;
+			if (i - 5 >= 0 && buf[i - 5] == '#')
+				count++;
+		}
+	 	i++;
+	 }
+	return (count);
+}
+
+int is_valid(int fd, uint64_t *t)
+{
+	char	buff[545]; /*26 тетраминок * 21 символ = 546, но начинаем с 0, поэтому 545*/
+	int		ret;
+	int		i;
+
+	ret = read(fd, buff, 545);
+	if (ret > 544 || ret < 19)
+		return (0);
+	buff[ret] = '\0';
+	i = 0;
+	while (i <= ret)
+	{
+		if (correct_chars(buff + i) != 4)
+			return (0);
+		if (river_check(buff + i) != 4 && river_check(buff + i) != 8)
+			return (0);
+		*t = work_with_tetri(buff + i);
+		t++;
+		i+= 21;
+	}
+	free(buff); /*уточнить, а можно ли так делать. По идее надо, т.к. тетраминок может юыть меньше, чем на 545 байт. И возвращаются они не в будфере, а в виже чисел*/
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/15 14:45:56 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/16 22:36:02 by null             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int 	main(int ac, char **av)
 	uint64_t	map;
 
 	y = 0;
-//	av[1] = "test_1.txt";
-//	ac = 2;
+	av[1] = "test_1.txt";
+	ac = 2;
 
 	if (ac != 2)
 		return (write(1, "usage: ./fillit input_tetraminos\n", 33));
@@ -32,7 +32,7 @@ int 	main(int ac, char **av)
 	if (!(tetramins = (uint64_t *)malloc(sizeof(uint64_t) * 26)))
 		return (write(1, "error: malloc tetraminos\n", 25));
 	ft_bzero(tetramins, sizeof(tetramins) * 26);
-	if (!(is_valid(fd, &tetramins)))
+	if (!(is_valid(fd, tetramins)))
 		return (write(1, "It's not a square/tetramine.\n", 29));
 	else
 		ft_putstr ("it's a square and right tetramin.\n");
