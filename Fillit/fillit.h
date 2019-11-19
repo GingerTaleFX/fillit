@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:39:09 by null             ###   ########.fr       */
+/*   Updated: 2019/11/19 11:18:02 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 int         check_tetramino(uint64_t src);
 uint64_t    move_tetro(uint64_t tmp, int y);
 uint64_t    work_with_tetri(char *content);
-int			is_valid(int fd, uint64_t *t);
+int			is_valid(char *buf, int size, uint64_t *t);
 int			river_check(char *buf);
 int			correct_chars(char *buf);
 void		ft_print_bit(uint64_t n, int x, int y);
@@ -39,6 +39,7 @@ uint64_t	ft_move(uint64_t tetra, int y);
 int 		func1(uint64_t map, uint64_t *tetra, int y);
 void		func2(uint64_t *tetra, int *y);
 void		ft_print_map(uint64_t *tetra, int y);
+int			parser(char *filename, uint64_t *t);
 
 #endif
 

@@ -12,6 +12,45 @@
 
 #include "fillit.h"
 
+int check_tetramino(uint64_t src)
+{
+	uint64_t tetramins[19] = {58368, 35968, 19968, 19520,
+							  52224,
+							  34952, 61440,
+							  51328, 57856, 50240, 36352, 17600, 35008, 11776, 59392,
+							  27648, 35904, 50688, 19584};
+	int	i;
+
+	i = -1;
+	while (++i < 19)
+		if(tetramins[i] == src)
+			return (1);
+	return (0);
+}
+
+uint64_t move_tetro(uint64_t tmp, int y)
+{
+	uint64_t	top;
+	uint64_t	left;
+	int			i;
+
+	i = y * y;
+	top = 0;
+	left = 0;
+	while (--i >= 0)
+	{
+		if (i >= y * (y - 1))
+			top |= (1 << i);
+		if (!((i + 1) % y))
+			left |= (1 << i);
+	}
+	while ((left & tmp) == 0)
+		tmp <<= 1;
+	while ((top & tmp) == 0)
+		tmp <<= y;
+	return (tmp);
+}
+
 /*
  * func count_lines count, how many lines (y) must have a map
  * */
