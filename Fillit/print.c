@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/20 13:15:07 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/20 13:58:37 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_print_bit(uint128_t n, int y)
 	int i;
 
 	i = y * y - 1;
-	while (i != UINT64_MAX)
+	while (i >= 0)
 	{
 		if (n & ((uint128_t)1 << i))
 			write(1, "#", 1);
@@ -37,7 +37,7 @@ void	ft_print_map(uint128_t *tetra, int y)
 	char		letter;
 
 	i = y * y - 1;
-	while (i != UINT64_MAX)
+	while (i >= 0)
 	{
 		j = 0;
 		while (tetra[j])
