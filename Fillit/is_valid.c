@@ -12,9 +12,9 @@
 #include "libft/libft.h"
 #include "fillit.h"
 
-uint64_t work_with_tetri(char *content)
+uint128_t work_with_tetri(char *content)
 {
-	uint64_t	tmp;
+	uint128_t	tmp;
 	int			j;
 
 	j = 15;
@@ -79,7 +79,7 @@ int river_check(char *buf)
 	return (count);
 }
 
-int is_valid(char *buf, int size, uint64_t *t)
+int is_valid(char *buf, int size, uint128_t *t)
 {
 	int		i;
 
@@ -91,14 +91,14 @@ int is_valid(char *buf, int size, uint64_t *t)
 		if (river_check(buf + i) != 6 && river_check(buf + i) != 8)
 			return (0);
 		*t = work_with_tetri(buf + i);
-		printf("t = %d\n", *t);
+		printf("t = %llu\n", *t);
 		t++;
 		i+= 21;
 	}
 	return (1);
 }
 
-int parser(char *filename, uint64_t *t)
+int parser(char *filename, uint128_t *t)
 {
 	char	buff[545]; /*26 тетраминок * 21 символ = 546, но начинаем с 0, поэтому 545*/
 	int		ret;

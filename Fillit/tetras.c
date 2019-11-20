@@ -12,9 +12,9 @@
 
 #include "fillit.h"
 
-int check_tetramino(uint64_t src)
+int check_tetramino(uint128_t src)
 {
-	uint64_t tetramins[19] = {58368, 35968, 19968, 19520,
+	uint128_t tetramins[19] = {58368, 35968, 19968, 19520,
 							  52224,
 							  34952, 61440,
 							  51328, 57856, 50240, 36352, 17600, 35008, 11776, 59392,
@@ -28,10 +28,10 @@ int check_tetramino(uint64_t src)
 	return (0);
 }
 
-uint64_t move_tetro(uint64_t tmp, int y)
+uint128_t move_tetro(uint128_t tmp, int y)
 {
-	uint64_t	top;
-	uint64_t	left;
+	uint128_t	top;
+	uint128_t	left;
 	int			i;
 
 	i = y * y;
@@ -55,7 +55,7 @@ uint64_t move_tetro(uint64_t tmp, int y)
  * func count_lines count, how many lines (y) must have a map
  * */
 
-uint64_t count_lines(uint64_t *tetra)
+uint128_t count_lines(uint128_t *tetra)
 {
 	int i;
 
@@ -85,12 +85,12 @@ uint64_t count_lines(uint64_t *tetra)
 /*
  * Make tetras bigger, if there are more then 4*
  */
-uint64_t *resize_tetras(uint64_t *tetra, int y, int counter)
+uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 {
 	int			i;
 	int			j;
 	int 		c;
-	uint64_t	tmp;
+	uint128_t	tmp;
 
 	c = 0;
 //	printf("tetras[%d] = %llu\n", c, *tetra);

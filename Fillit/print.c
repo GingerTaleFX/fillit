@@ -6,26 +6,23 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 13:10:30 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Updated: 2019/11/20 14:10:02 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "fillit.h"
 
-void	ft_print_bit(uint64_t n, int x, int y)
+void	ft_print_bit(uint128_t n, int y)
 {
 	int i;
 
-	i = x - 1;
+	i = y * y - 1;
 	while (i >= 0)
 	{
-		if ((n & (1 << i)) == 0)
+		if (n & ((uint128_t)1 << i))
+			write(1, "#", 1);
+		else
 			write(1, ".", 1);
-		else if ((n & (1 << i)) != 0)
-		{
-			ft_putchar('#');
-		}
 		if (i % y == 0)
 			write(1, "\n", 1);
 		i--;
@@ -33,11 +30,11 @@ void	ft_print_bit(uint64_t n, int x, int y)
 	write(1, "\n", 1);
 }
 
-void	ft_print_map(uint64_t *tetra, int y)
+void	ft_print_map(uint128_t *tetra, int y)
 {
-	int		i;
-	int		j;
-	char	letter;
+	int			i;
+	int			j;
+	char		letter;
 
 	i = y * y - 1;
 	while (i >= 0)
@@ -45,7 +42,7 @@ void	ft_print_map(uint64_t *tetra, int y)
 		j = 0;
 		while (tetra[j])
 		{
-			if ((tetra[j] & (1 << i)))
+			if ((tetra[j] & ((uint128_t)1 << i)))
 			{
 				letter = j + 65;
 				write(1, &letter, 1);

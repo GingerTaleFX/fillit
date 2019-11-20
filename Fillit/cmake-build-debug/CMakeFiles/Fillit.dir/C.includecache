@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/kroselin/CLionProjects/home/Fillit/fillit.h
+/Users/mdirect/Desktop/Fillit/fillit.h
 stdio.h
 -
 libft/libft.h
-/Users/kroselin/CLionProjects/home/Fillit/libft/libft.h
+/Users/mdirect/Desktop/Fillit/libft/libft.h
 sys/types.h
 -
 unistd.h
@@ -22,11 +22,7 @@ sys/stat.h
 fcntl.h
 -
 
-/Users/kroselin/CLionProjects/home/Fillit/is_valid.c
-fillit.h
-/Users/kroselin/CLionProjects/home/Fillit/fillit.h
-
-/Users/kroselin/CLionProjects/home/Fillit/libft/libft.h
+/Users/mdirect/Desktop/Fillit/libft/libft.h
 string.h
 -
 stdlib.h
@@ -40,7 +36,9 @@ sys/stat.h
 fcntl.h
 -
 
-/Users/kroselin/CLionProjects/home/Fillit/main.c
+/Users/mdirect/Desktop/Fillit/main.c
+libft/libft.h
+/Users/mdirect/Desktop/Fillit/libft/libft.h
 fillit.h
-/Users/kroselin/CLionProjects/home/Fillit/fillit.h
+/Users/mdirect/Desktop/Fillit/fillit.h
 
