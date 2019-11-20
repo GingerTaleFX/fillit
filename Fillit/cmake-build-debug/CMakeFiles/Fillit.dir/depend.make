@@ -193,10 +193,6 @@ CMakeFiles/Fillit.dir/main.c.o: ../fillit.h
 CMakeFiles/Fillit.dir/main.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/main.c.o: ../main.c
 
-CMakeFiles/Fillit.dir/map.c.o: ../fillit.h
-CMakeFiles/Fillit.dir/map.c.o: ../libft/libft.h
-CMakeFiles/Fillit.dir/map.c.o: ../map.c
-
 CMakeFiles/Fillit.dir/print.c.o: ../fillit.h
 CMakeFiles/Fillit.dir/print.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/print.c.o: ../print.c

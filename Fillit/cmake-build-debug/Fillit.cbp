@@ -287,9 +287,6 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/main.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/map.c">
-			<Option target="Fillit"/>
-		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/print.c">
 			<Option target="Fillit"/>
 		</Unit>

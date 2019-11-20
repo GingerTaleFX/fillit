@@ -93,5 +93,4 @@ add_executable(Fillit
         is_valid.c
         print.c
         tetras.c
-        map.c
         algos.c)
