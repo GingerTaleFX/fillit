@@ -63,7 +63,6 @@ int 		func1(uint128_t map, uint128_t *tetra, int y)
 			return (0);
 		}
 	}
-	return (0);
 }
 
 void		func2(uint128_t *tetra, int *y)
@@ -72,7 +71,7 @@ void		func2(uint128_t *tetra, int *y)
 	int i;
 
 	map = 0;
-	while (!(func1(map, tetra, *y)) && *y < 16)
+	while (!(func1(map, tetra, *y)) /* && *y < 16 */)
 	{
 		map = 0;
 

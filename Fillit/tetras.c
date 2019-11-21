@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 11:19:53 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/21 16:16:23 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,18 @@ uint128_t move_tetro(uint128_t tmp, int y)
  * func count_lines count, how many lines (y) must have a map
  * */
 
-uint128_t count_lines(uint128_t *tetra)
+int count_lines(uint128_t *tetra)
 {
 	int i;
 
 	i = 0;
 	while (tetra[i])
 		i++;
-	if (i >= 2 && i <= 4)
+	if (i == 1)
+		return (1);
+	else if (i == 2)
+		return (3);
+	else if (i >= 3 && i <= 4)
 		return (4);
 	else if (i >= 5 && i <= 6)
 		return (5);
@@ -78,8 +82,7 @@ uint128_t count_lines(uint128_t *tetra)
 		return (10);
 	else if (i == 26)
 		return (11);
-	else
-		return (0);
+	return (0);
 }
 
 /*
@@ -93,7 +96,6 @@ uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 	uint128_t	tmp;
 
 	c = 0;
-//	printf("tetras[%d] = %llu\n", c, *tetra);
 	while (*tetra)
 	{
 		i = (counter == 1) ? 4 : y - 1;
@@ -109,11 +111,33 @@ uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 			*tetra = tmp << (i + 1);
 			i++;
 		}
-//		printf("tetras[%d] = %llu\n", c, *tetra);
 		tetra++;
 		c++;
-//		printf("tetras[%d] = %d\n", c, *tetra);
 	}
-
 	return (tetra - c);
+}
+
+int *small_tetra(uint128_t *tetra, int y)
+{
+	int i;
+	int j;
+	uint128_t tmp;
+
+	while (ft_move(tetra, y))
+		continue;
+
+	while (*tetra)
+	{
+		tmp = 0;
+		i = y;
+		while (--i > 0)
+		{
+			tmp += (*tetra >> (y * (i - 1))) << ((y - 1) * (i - 1));
+			*tetra -= (*tetra >> ((y * (i - 1)) - 1)) << ((y * (i - 1)) - 1);
+		}
+		tmp += *tetra;
+		tetra++;
+	}
+//	*tetra = tmp;
+	return (tetra);
 }

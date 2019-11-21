@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 13:22:56 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/21 16:07:33 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int 	main(int ac, char **av)
 	uint128_t	map;
 
 	y = 0;
-	av[1] = "test_1.txt";
+	av[1] = "test_5.txt";
 	ac = 2;
 
 	if (ac != 2)
@@ -37,16 +37,38 @@ int 	main(int ac, char **av)
 	if ((y = count_lines(tetramins)) > 26)
 		ft_putstr ("Too many tetraminos\n");
 
-	i = -1;
-	while (++i < 26 && tetramins[i])
+//	i = -1;
+//	while (++i < 26 && tetramins[i])
+//	{
+//		printf("tetra[%d] = %llu\n", i, tetramins[i]);
+////		ft_print_bit(tetramins[i], y);
+//	}
+
+
+	if(y == 1)
 	{
-		printf("tetra[%d] = %llu\n", i, tetramins[i]);
-//		ft_print_bit(tetramins[i], y);
+		if (tetramins[0] == 52224)
+		{
+			tetramins[0] = 15;
+			ft_print_map(tetramins, 2);
+		}
+
+		else if (tetramins[0] == 34952 || tetramins[0] == 61440)
+			ft_print_map(tetramins, 3);
+		else
+		{
+			tetramins = small_tetra(tetramins, 4);
+			ft_print_map(tetramins, 3);
+		}
+
 	}
-
-	if (y > 4)
+	else if ( y > 4)
+	{
 		tetramins = resize_tetras(tetramins, y, 1);
-
+		func2(tetramins, &y);
+	}
+	else
+		func2(tetramins, &y);
 //	i = -1;
 //	while (++i < 26 && tetramins[i])
 //	{
@@ -54,7 +76,7 @@ int 	main(int ac, char **av)
 //		ft_print_bit(tetramins[i], y);
 //	}
 
-	func2(tetramins, &y);
+
 
 //	i = -1;
 //	while (++i < 26 && tetramins[i])
