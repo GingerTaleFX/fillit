@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/19 12:06:11 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/21 11:22:48 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
@@ -91,7 +91,7 @@ int is_valid(char *buf, int size, uint128_t *t)
 		if (river_check(buf + i) != 6 && river_check(buf + i) != 8)
 			return (0);
 		*t = work_with_tetri(buf + i);
-		printf("t = %llu\n", *t);
+//		printf("t = %llu\n", *t);
 		t++;
 		i+= 21;
 	}

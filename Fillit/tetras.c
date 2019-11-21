@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 18:49:40 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/21 21:50:32 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ uint128_t move_tetro(uint128_t tmp, int y)
 	while (--i >= 0)
 	{
 		if (i >= y * (y - 1))
-			top |= (1 << i);
+			top |= ((uint128_t)1 << i);
 		if (!((i + 1) % y))
-			left |= (1 << i);
+			left |= ((uint128_t)1 << i);
 	}
 	while ((left & tmp) == 0)
 		tmp <<= 1;
@@ -55,22 +55,33 @@ uint128_t move_tetro(uint128_t tmp, int y)
  * func count_lines count, how many lines (y) must have a map
  * */
 
-uint128_t count_lines(uint128_t *tetra)
+int count_lines(uint128_t *tetra)
 {
 	int i;
+	int j;
 
 	i = 0;
 	while (tetra[i])
+	{
+		if (tetra[i] == 34952 || tetra[i] == 61440)
+			j = 1;
 		i++;
-	if (i >= 2 && i <= 4)
+	}
+	if (i == 1)
+		return (1);
+	else if (i == 2 && j == 1)
 		return (4);
-	else if (i >= 5 && i <= 7)
+	else if (i == 2)
+		return (3);
+	else if (i >= 3 && i <= 4)
+		return (4);
+	else if (i >= 5 && i <= 6)
 		return (5);
-	else if (i >= 8 && i <= 9)
+	else if (i >= 7 && i <= 9)
 		return (6);
-	else if (i >= 10 && i <= 11)
+	else if (i >= 10 && i <= 12)
 		return (7);
-	else if (i >= 12 && i <= 16)
+	else if (i >= 13 && i <= 16)
 		return (8);
 	else if (i >= 17 && i <= 20)
 		return (9);
@@ -78,8 +89,7 @@ uint128_t count_lines(uint128_t *tetra)
 		return (10);
 	else if (i == 26)
 		return (11);
-	else
-		return (0);
+	return (0);
 }
 
 /*
@@ -93,7 +103,6 @@ uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 	uint128_t	tmp;
 
 	c = 0;
-//	printf("tetras[%d] = %llu\n", c, *tetra);
 	while (*tetra)
 	{
 		i = (counter == 1) ? 4 : y - 1;
@@ -109,11 +118,40 @@ uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 			*tetra = tmp << (i + 1);
 			i++;
 		}
-//		printf("tetras[%d] = %llu\n", c, *tetra);
 		tetra++;
 		c++;
-//		printf("tetras[%d] = %d\n", c, *tetra);
 	}
+	return (tetra - c);
+}
 
+uint128_t	*small_tetra(uint128_t *tetra, int y)
+{
+	int			i;
+	int			j;
+	int 		c;
+	uint128_t	tmp;
+
+	c = 0;
+	while (*tetra)
+	{
+		i = 4;
+		while(i > y)
+		{
+			while (ft_move(tetra, i))
+				continue;
+			j = 0;
+			tmp = 0;
+			while (*tetra)
+			{
+				tmp += (*tetra - ((*tetra >> i) << i)) << (j * (i - 1));
+				*tetra = *tetra >> i;
+				j++;
+			}
+			*tetra = tmp;
+			i--;
+		}
+		tetra++;
+		c++;
+	}
 	return (tetra - c);
 }
