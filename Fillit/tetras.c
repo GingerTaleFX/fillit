@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/14 18:49:40 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/21 11:19:53 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ uint128_t move_tetro(uint128_t tmp, int y)
 	while (--i >= 0)
 	{
 		if (i >= y * (y - 1))
-			top |= (1 << i);
+			top |= ((uint128_t)1 << i);
 		if (!((i + 1) % y))
-			left |= (1 << i);
+			left |= ((uint128_t)1 << i);
 	}
 	while ((left & tmp) == 0)
 		tmp <<= 1;
@@ -64,13 +64,13 @@ uint128_t count_lines(uint128_t *tetra)
 		i++;
 	if (i >= 2 && i <= 4)
 		return (4);
-	else if (i >= 5 && i <= 7)
+	else if (i >= 5 && i <= 6)
 		return (5);
-	else if (i >= 8 && i <= 9)
+	else if (i >= 7 && i <= 9)
 		return (6);
-	else if (i >= 10 && i <= 11)
+	else if (i >= 10 && i <= 12)
 		return (7);
-	else if (i >= 12 && i <= 16)
+	else if (i >= 13 && i <= 16)
 		return (8);
 	else if (i >= 17 && i <= 20)
 		return (9);

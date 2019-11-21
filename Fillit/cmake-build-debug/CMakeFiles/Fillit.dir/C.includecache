@@ -36,9 +36,7 @@ sys/stat.h
 fcntl.h
 -
 
-/Users/mdirect/Desktop/Fillit/main.c
-libft/libft.h
-/Users/mdirect/Desktop/Fillit/libft/libft.h
+/Users/mdirect/Desktop/Fillit/tetras.c
 fillit.h
 /Users/mdirect/Desktop/Fillit/fillit.h
 
