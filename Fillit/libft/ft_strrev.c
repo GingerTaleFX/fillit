@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 23:19:53 by mdirect           #+#    #+#             */
-/*   Updated: 2019/09/10 23:21:35 by mdirect          ###   ########.fr       */
+/*   Created: 2019/09/15 19:56:48 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/15 20:16:18 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int		ft_isprint(int c)
+void	ft_strrev(char *s)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	n;
+	char	c;
+
+	if (!s)
+		return ;
+	n = ft_strlen(s) - 1;
+	i = 0;
+	while (i < n)
+	{
+		c = s[i];
+		s[i] = s[n];
+		s[n] = c;
+		i++;
+		n--;
+	}
 }

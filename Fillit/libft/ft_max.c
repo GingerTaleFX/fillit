@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_mass.c                                    :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 16:49:14 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Created: 2019/09/15 20:18:35 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/15 20:18:35 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_mass(char const *s, char c)
+int		ft_max(int a, int b)
 {
-	int i;
-
-	i = 0;
-	if (*s != c)
-		i++;
-	while (*s != '\0')
-	{
-		if (*s == c)
-		{
-			if (*(s + 1) != c && *(s + 1) != '\0')
-				i++;
-		}
-		s++;
-	}
-	return (i);
+	return ((a > b) ? a : b);
 }

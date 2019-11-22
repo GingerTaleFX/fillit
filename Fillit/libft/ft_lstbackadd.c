@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_listbackadd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 23:19:53 by mdirect           #+#    #+#             */
-/*   Updated: 2019/09/10 23:21:35 by mdirect          ###   ########.fr       */
+/*   Created: 2019/09/15 15:39:09 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/15 15:51:07 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+void	ft_lstbackadd(t_list **alst, t_list *new)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	t_list *last;
+
+	if (alst && *alst)
+	{
+		last = *alst;
+		while (last->next)
+			last = last->next;
+		last->next = new;
+	}
+	else
+		*alst = new;
 }
