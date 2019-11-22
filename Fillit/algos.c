@@ -6,52 +6,21 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:04:02 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/22 11:08:51 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/22 11:13:00 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
-uint128_t	make_left(int y)
-{
-	uint128_t	left;
-	int			i;
-
-	i = y * y;
-	left = 0;
-	while (--i >= 0)
-		if (!((i + 1) % y))
-			left |= ((uint128_t)1 << i);
-	return (left);
-}
-
-uint128_t	make_bottom(int y)
-{
-	uint128_t	bottom;
-	int			i;
-
-	i = y * y;
-	bottom = 0;
-	while (--i >= 0)
-		if (i < y)
-			bottom |= ((uint128_t)1 << i);
-	return (bottom);
-}
 
 int			ft_move(uint128_t *tetra, int y)
 {
 	uint128_t	right;
 	uint128_t	left;
 	uint128_t	bottom;
-	int			i;
 
-	i = y * y;
-	right = 0;
+	right = make_right(y);
 	left = make_left(y);
 	bottom = make_bottom(y);
-	while (--i >= 0)
-		if (!(i % y))
-			right |= ((uint128_t)1 << i);
 	if ((bottom & *tetra) && (right & *tetra))
 		return (0);
 	if (right & *tetra)

@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:19:21 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 15:29:26 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/22 11:01:10 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int			parser(char *filename, uint128_t *t);
 uint128_t	*small_tetra(uint128_t *tetra, int y);
 uint128_t	make_left(int y);
 uint128_t	make_bottom(int y);
+uint128_t	make_right(int y);
 
 #endif
 

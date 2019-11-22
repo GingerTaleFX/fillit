@@ -86,7 +86,7 @@
       <workItem from="1574328030390" duration="2003000" />
       <workItem from="1574344637741" duration="2699000" />
       <workItem from="1574358485982" duration="3745000" />
-      <workItem from="1574409262998" duration="675000" />
+      <workItem from="1574409262998" duration="1164000" />
     </task>
     <servers />
   </component>
@@ -111,13 +111,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/algos.c</url>
-          <line>83</line>
+          <line>69</line>
           <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/tetras.c</url>
-          <line>63</line>
-          <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
