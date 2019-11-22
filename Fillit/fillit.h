@@ -37,6 +37,8 @@ void		func2(uint128_t *tetra, int *y);
 void		ft_print_map(uint128_t *tetra, int y);
 int			parser(char *filename, uint128_t *t);
 uint128_t	*small_tetra(uint128_t *tetra, int y);
+uint128_t	make_left(int y);
+uint128_t	make_bottom(int y);
 
 #endif
 

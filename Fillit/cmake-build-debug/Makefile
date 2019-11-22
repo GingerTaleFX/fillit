@@ -231,33 +231,6 @@ libft/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_bzero.c.s
 .PHONY : libft/ft_bzero.c.s
 
-libft/ft_count_mass.o: libft/ft_count_mass.c.o
-
-.PHONY : libft/ft_count_mass.o
-
-# target to build an object file
-libft/ft_count_mass.c.o:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_count_mass.c.o
-.PHONY : libft/ft_count_mass.c.o
-
-libft/ft_count_mass.i: libft/ft_count_mass.c.i
-
-.PHONY : libft/ft_count_mass.i
-
-# target to preprocess a source file
-libft/ft_count_mass.c.i:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_count_mass.c.i
-.PHONY : libft/ft_count_mass.c.i
-
-libft/ft_count_mass.s: libft/ft_count_mass.c.s
-
-.PHONY : libft/ft_count_mass.s
-
-# target to generate assembly for a file
-libft/ft_count_mass.c.s:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_count_mass.c.s
-.PHONY : libft/ft_count_mass.c.s
-
 libft/ft_isalnum.o: libft/ft_isalnum.c.o
 
 .PHONY : libft/ft_isalnum.o
@@ -420,6 +393,33 @@ libft/ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_itoa.c.s
 .PHONY : libft/ft_itoa.c.s
 
+libft/ft_lenint.o: libft/ft_lenint.c.o
+
+.PHONY : libft/ft_lenint.o
+
+# target to build an object file
+libft/ft_lenint.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lenint.c.o
+.PHONY : libft/ft_lenint.c.o
+
+libft/ft_lenint.i: libft/ft_lenint.c.i
+
+.PHONY : libft/ft_lenint.i
+
+# target to preprocess a source file
+libft/ft_lenint.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lenint.c.i
+.PHONY : libft/ft_lenint.c.i
+
+libft/ft_lenint.s: libft/ft_lenint.c.s
+
+.PHONY : libft/ft_lenint.s
+
+# target to generate assembly for a file
+libft/ft_lenint.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lenint.c.s
+.PHONY : libft/ft_lenint.c.s
+
 libft/ft_lstadd.o: libft/ft_lstadd.c.o
 
 .PHONY : libft/ft_lstadd.o
@@ -446,6 +446,33 @@ libft/ft_lstadd.s: libft/ft_lstadd.c.s
 libft/ft_lstadd.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lstadd.c.s
 .PHONY : libft/ft_lstadd.c.s
+
+libft/ft_lstbackadd.o: libft/ft_lstbackadd.c.o
+
+.PHONY : libft/ft_lstbackadd.o
+
+# target to build an object file
+libft/ft_lstbackadd.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lstbackadd.c.o
+.PHONY : libft/ft_lstbackadd.c.o
+
+libft/ft_lstbackadd.i: libft/ft_lstbackadd.c.i
+
+.PHONY : libft/ft_lstbackadd.i
+
+# target to preprocess a source file
+libft/ft_lstbackadd.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lstbackadd.c.i
+.PHONY : libft/ft_lstbackadd.c.i
+
+libft/ft_lstbackadd.s: libft/ft_lstbackadd.c.s
+
+.PHONY : libft/ft_lstbackadd.s
+
+# target to generate assembly for a file
+libft/ft_lstbackadd.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lstbackadd.c.s
+.PHONY : libft/ft_lstbackadd.c.s
 
 libft/ft_lstdel.o: libft/ft_lstdel.c.o
 
@@ -581,6 +608,33 @@ libft/ft_lstnew.s: libft/ft_lstnew.c.s
 libft/ft_lstnew.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_lstnew.c.s
 .PHONY : libft/ft_lstnew.c.s
+
+libft/ft_max.o: libft/ft_max.c.o
+
+.PHONY : libft/ft_max.o
+
+# target to build an object file
+libft/ft_max.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_max.c.o
+.PHONY : libft/ft_max.c.o
+
+libft/ft_max.i: libft/ft_max.c.i
+
+.PHONY : libft/ft_max.i
+
+# target to preprocess a source file
+libft/ft_max.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_max.c.i
+.PHONY : libft/ft_max.c.i
+
+libft/ft_max.s: libft/ft_max.c.s
+
+.PHONY : libft/ft_max.s
+
+# target to generate assembly for a file
+libft/ft_max.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_max.c.s
+.PHONY : libft/ft_max.c.s
 
 libft/ft_memalloc.o: libft/ft_memalloc.c.o
 
@@ -797,6 +851,33 @@ libft/ft_memset.s: libft/ft_memset.c.s
 libft/ft_memset.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_memset.c.s
 .PHONY : libft/ft_memset.c.s
+
+libft/ft_min.o: libft/ft_min.c.o
+
+.PHONY : libft/ft_min.o
+
+# target to build an object file
+libft/ft_min.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_min.c.o
+.PHONY : libft/ft_min.c.o
+
+libft/ft_min.i: libft/ft_min.c.i
+
+.PHONY : libft/ft_min.i
+
+# target to preprocess a source file
+libft/ft_min.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_min.c.i
+.PHONY : libft/ft_min.c.i
+
+libft/ft_min.s: libft/ft_min.c.s
+
+.PHONY : libft/ft_min.s
+
+# target to generate assembly for a file
+libft/ft_min.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_min.c.s
+.PHONY : libft/ft_min.c.s
 
 libft/ft_putchar.o: libft/ft_putchar.c.o
 
@@ -1311,6 +1392,33 @@ libft/ft_strjoin.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strjoin.c.s
 .PHONY : libft/ft_strjoin.c.s
 
+libft/ft_strjoinfree.o: libft/ft_strjoinfree.c.o
+
+.PHONY : libft/ft_strjoinfree.o
+
+# target to build an object file
+libft/ft_strjoinfree.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strjoinfree.c.o
+.PHONY : libft/ft_strjoinfree.c.o
+
+libft/ft_strjoinfree.i: libft/ft_strjoinfree.c.i
+
+.PHONY : libft/ft_strjoinfree.i
+
+# target to preprocess a source file
+libft/ft_strjoinfree.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strjoinfree.c.i
+.PHONY : libft/ft_strjoinfree.c.i
+
+libft/ft_strjoinfree.s: libft/ft_strjoinfree.c.s
+
+.PHONY : libft/ft_strjoinfree.s
+
+# target to generate assembly for a file
+libft/ft_strjoinfree.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strjoinfree.c.s
+.PHONY : libft/ft_strjoinfree.c.s
+
 libft/ft_strlcat.o: libft/ft_strlcat.c.o
 
 .PHONY : libft/ft_strlcat.o
@@ -1554,33 +1662,6 @@ libft/ft_strnew.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strnew.c.s
 .PHONY : libft/ft_strnew.c.s
 
-libft/ft_strnlen.o: libft/ft_strnlen.c.o
-
-.PHONY : libft/ft_strnlen.o
-
-# target to build an object file
-libft/ft_strnlen.c.o:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strnlen.c.o
-.PHONY : libft/ft_strnlen.c.o
-
-libft/ft_strnlen.i: libft/ft_strnlen.c.i
-
-.PHONY : libft/ft_strnlen.i
-
-# target to preprocess a source file
-libft/ft_strnlen.c.i:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strnlen.c.i
-.PHONY : libft/ft_strnlen.c.i
-
-libft/ft_strnlen.s: libft/ft_strnlen.c.s
-
-.PHONY : libft/ft_strnlen.s
-
-# target to generate assembly for a file
-libft/ft_strnlen.c.s:
-	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strnlen.c.s
-.PHONY : libft/ft_strnlen.c.s
-
 libft/ft_strnstr.o: libft/ft_strnstr.c.o
 
 .PHONY : libft/ft_strnstr.o
@@ -1634,6 +1715,33 @@ libft/ft_strrchr.s: libft/ft_strrchr.c.s
 libft/ft_strrchr.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strrchr.c.s
 .PHONY : libft/ft_strrchr.c.s
+
+libft/ft_strrev.o: libft/ft_strrev.c.o
+
+.PHONY : libft/ft_strrev.o
+
+# target to build an object file
+libft/ft_strrev.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strrev.c.o
+.PHONY : libft/ft_strrev.c.o
+
+libft/ft_strrev.i: libft/ft_strrev.c.i
+
+.PHONY : libft/ft_strrev.i
+
+# target to preprocess a source file
+libft/ft_strrev.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strrev.c.i
+.PHONY : libft/ft_strrev.c.i
+
+libft/ft_strrev.s: libft/ft_strrev.c.s
+
+.PHONY : libft/ft_strrev.s
+
+# target to generate assembly for a file
+libft/ft_strrev.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_strrev.c.s
+.PHONY : libft/ft_strrev.c.s
 
 libft/ft_strsplit.o: libft/ft_strsplit.c.o
 
@@ -1797,6 +1905,33 @@ libft/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
+libft/get_next_line.o: libft/get_next_line.c.o
+
+.PHONY : libft/get_next_line.o
+
+# target to build an object file
+libft/get_next_line.c.o:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/get_next_line.c.o
+.PHONY : libft/get_next_line.c.o
+
+libft/get_next_line.i: libft/get_next_line.c.i
+
+.PHONY : libft/get_next_line.i
+
+# target to preprocess a source file
+libft/get_next_line.c.i:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/get_next_line.c.i
+.PHONY : libft/get_next_line.c.i
+
+libft/get_next_line.s: libft/get_next_line.c.s
+
+.PHONY : libft/get_next_line.s
+
+# target to generate assembly for a file
+libft/get_next_line.c.s:
+	$(MAKE) -f CMakeFiles/Fillit.dir/build.make CMakeFiles/Fillit.dir/libft/get_next_line.c.s
+.PHONY : libft/get_next_line.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -1899,9 +2034,6 @@ help:
 	@echo "... libft/ft_bzero.o"
 	@echo "... libft/ft_bzero.i"
 	@echo "... libft/ft_bzero.s"
-	@echo "... libft/ft_count_mass.o"
-	@echo "... libft/ft_count_mass.i"
-	@echo "... libft/ft_count_mass.s"
 	@echo "... libft/ft_isalnum.o"
 	@echo "... libft/ft_isalnum.i"
 	@echo "... libft/ft_isalnum.s"
@@ -1920,9 +2052,15 @@ help:
 	@echo "... libft/ft_itoa.o"
 	@echo "... libft/ft_itoa.i"
 	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_lenint.o"
+	@echo "... libft/ft_lenint.i"
+	@echo "... libft/ft_lenint.s"
 	@echo "... libft/ft_lstadd.o"
 	@echo "... libft/ft_lstadd.i"
 	@echo "... libft/ft_lstadd.s"
+	@echo "... libft/ft_lstbackadd.o"
+	@echo "... libft/ft_lstbackadd.i"
+	@echo "... libft/ft_lstbackadd.s"
 	@echo "... libft/ft_lstdel.o"
 	@echo "... libft/ft_lstdel.i"
 	@echo "... libft/ft_lstdel.s"
@@ -1938,6 +2076,9 @@ help:
 	@echo "... libft/ft_lstnew.o"
 	@echo "... libft/ft_lstnew.i"
 	@echo "... libft/ft_lstnew.s"
+	@echo "... libft/ft_max.o"
+	@echo "... libft/ft_max.i"
+	@echo "... libft/ft_max.s"
 	@echo "... libft/ft_memalloc.o"
 	@echo "... libft/ft_memalloc.i"
 	@echo "... libft/ft_memalloc.s"
@@ -1962,6 +2103,9 @@ help:
 	@echo "... libft/ft_memset.o"
 	@echo "... libft/ft_memset.i"
 	@echo "... libft/ft_memset.s"
+	@echo "... libft/ft_min.o"
+	@echo "... libft/ft_min.i"
+	@echo "... libft/ft_min.s"
 	@echo "... libft/ft_putchar.o"
 	@echo "... libft/ft_putchar.i"
 	@echo "... libft/ft_putchar.s"
@@ -2019,6 +2163,9 @@ help:
 	@echo "... libft/ft_strjoin.o"
 	@echo "... libft/ft_strjoin.i"
 	@echo "... libft/ft_strjoin.s"
+	@echo "... libft/ft_strjoinfree.o"
+	@echo "... libft/ft_strjoinfree.i"
+	@echo "... libft/ft_strjoinfree.s"
 	@echo "... libft/ft_strlcat.o"
 	@echo "... libft/ft_strlcat.i"
 	@echo "... libft/ft_strlcat.s"
@@ -2046,15 +2193,15 @@ help:
 	@echo "... libft/ft_strnew.o"
 	@echo "... libft/ft_strnew.i"
 	@echo "... libft/ft_strnew.s"
-	@echo "... libft/ft_strnlen.o"
-	@echo "... libft/ft_strnlen.i"
-	@echo "... libft/ft_strnlen.s"
 	@echo "... libft/ft_strnstr.o"
 	@echo "... libft/ft_strnstr.i"
 	@echo "... libft/ft_strnstr.s"
 	@echo "... libft/ft_strrchr.o"
 	@echo "... libft/ft_strrchr.i"
 	@echo "... libft/ft_strrchr.s"
+	@echo "... libft/ft_strrev.o"
+	@echo "... libft/ft_strrev.i"
+	@echo "... libft/ft_strrev.s"
 	@echo "... libft/ft_strsplit.o"
 	@echo "... libft/ft_strsplit.i"
 	@echo "... libft/ft_strsplit.s"
@@ -2073,6 +2220,9 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
+	@echo "... libft/get_next_line.o"
+	@echo "... libft/get_next_line.i"
+	@echo "... libft/get_next_line.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

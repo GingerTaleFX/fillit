@@ -27,16 +27,10 @@ fcntl.h
 -
 
 /Users/mdirect/Desktop/Fillit/libft/libft.h
-string.h
--
 stdlib.h
 -
 unistd.h
 -
-sys/types.h
--
-sys/stat.h
--
-fcntl.h
+string.h
 -
 

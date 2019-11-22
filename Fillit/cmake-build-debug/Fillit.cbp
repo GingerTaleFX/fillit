@@ -107,9 +107,6 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_bzero.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_count_mass.c">
-			<Option target="Fillit"/>
-		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_isalnum.c">
 			<Option target="Fillit"/>
 		</Unit>
@@ -128,7 +125,13 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_itoa.c">
 			<Option target="Fillit"/>
 		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lenint.c">
+			<Option target="Fillit"/>
+		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstadd.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstbackadd.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstdel.c">
@@ -144,6 +147,9 @@
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_lstnew.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_max.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memalloc.c">
@@ -168,6 +174,9 @@
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_memset.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_min.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_putchar.c">
@@ -227,6 +236,9 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strjoin.c">
 			<Option target="Fillit"/>
 		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strjoinfree.c">
+			<Option target="Fillit"/>
+		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strlcat.c">
 			<Option target="Fillit"/>
 		</Unit>
@@ -254,13 +266,13 @@
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnew.c">
 			<Option target="Fillit"/>
 		</Unit>
-		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnlen.c">
-			<Option target="Fillit"/>
-		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strnstr.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strrchr.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strrev.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_strsplit.c">
@@ -279,6 +291,9 @@
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/ft_toupper.c">
+			<Option target="Fillit"/>
+		</Unit>
+		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/get_next_line.c">
 			<Option target="Fillit"/>
 		</Unit>
 		<Unit filename="/Users/mdirect/Desktop/Fillit/libft/libft.h">

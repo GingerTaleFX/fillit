@@ -15,9 +15,6 @@ CMakeFiles/Fillit.dir/libft/ft_atoi.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
 CMakeFiles/Fillit.dir/libft/ft_bzero.c.o: ../libft/libft.h
 
-CMakeFiles/Fillit.dir/libft/ft_count_mass.c.o: ../libft/ft_count_mass.c
-CMakeFiles/Fillit.dir/libft/ft_count_mass.c.o: ../libft/libft.h
-
 CMakeFiles/Fillit.dir/libft/ft_isalnum.c.o: ../libft/ft_isalnum.c
 CMakeFiles/Fillit.dir/libft/ft_isalnum.c.o: ../libft/libft.h
 
@@ -36,8 +33,14 @@ CMakeFiles/Fillit.dir/libft/ft_isprint.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
 CMakeFiles/Fillit.dir/libft/ft_itoa.c.o: ../libft/libft.h
 
+CMakeFiles/Fillit.dir/libft/ft_lenint.c.o: ../libft/ft_lenint.c
+CMakeFiles/Fillit.dir/libft/ft_lenint.c.o: ../libft/libft.h
+
 CMakeFiles/Fillit.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
 CMakeFiles/Fillit.dir/libft/ft_lstadd.c.o: ../libft/libft.h
+
+CMakeFiles/Fillit.dir/libft/ft_lstbackadd.c.o: ../libft/ft_lstbackadd.c
+CMakeFiles/Fillit.dir/libft/ft_lstbackadd.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_lstdel.c.o: ../libft/ft_lstdel.c
 CMakeFiles/Fillit.dir/libft/ft_lstdel.c.o: ../libft/libft.h
@@ -53,6 +56,9 @@ CMakeFiles/Fillit.dir/libft/ft_lstmap.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_lstnew.c.o: ../libft/ft_lstnew.c
 CMakeFiles/Fillit.dir/libft/ft_lstnew.c.o: ../libft/libft.h
+
+CMakeFiles/Fillit.dir/libft/ft_max.c.o: ../libft/ft_max.c
+CMakeFiles/Fillit.dir/libft/ft_max.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_memalloc.c.o: ../libft/ft_memalloc.c
 CMakeFiles/Fillit.dir/libft/ft_memalloc.c.o: ../libft/libft.h
@@ -77,6 +83,9 @@ CMakeFiles/Fillit.dir/libft/ft_memmove.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_memset.c.o: ../libft/ft_memset.c
 CMakeFiles/Fillit.dir/libft/ft_memset.c.o: ../libft/libft.h
+
+CMakeFiles/Fillit.dir/libft/ft_min.c.o: ../libft/ft_min.c
+CMakeFiles/Fillit.dir/libft/ft_min.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_putchar.c.o: ../libft/ft_putchar.c
 CMakeFiles/Fillit.dir/libft/ft_putchar.c.o: ../libft/libft.h
@@ -135,6 +144,9 @@ CMakeFiles/Fillit.dir/libft/ft_striteri.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
 CMakeFiles/Fillit.dir/libft/ft_strjoin.c.o: ../libft/libft.h
 
+CMakeFiles/Fillit.dir/libft/ft_strjoinfree.c.o: ../libft/ft_strjoinfree.c
+CMakeFiles/Fillit.dir/libft/ft_strjoinfree.c.o: ../libft/libft.h
+
 CMakeFiles/Fillit.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
 CMakeFiles/Fillit.dir/libft/ft_strlcat.c.o: ../libft/libft.h
 
@@ -162,14 +174,14 @@ CMakeFiles/Fillit.dir/libft/ft_strnequ.c.o: ../libft/libft.h
 CMakeFiles/Fillit.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
 CMakeFiles/Fillit.dir/libft/ft_strnew.c.o: ../libft/libft.h
 
-CMakeFiles/Fillit.dir/libft/ft_strnlen.c.o: ../libft/ft_strnlen.c
-CMakeFiles/Fillit.dir/libft/ft_strnlen.c.o: ../libft/libft.h
-
 CMakeFiles/Fillit.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
 CMakeFiles/Fillit.dir/libft/ft_strnstr.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
 CMakeFiles/Fillit.dir/libft/ft_strrchr.c.o: ../libft/libft.h
+
+CMakeFiles/Fillit.dir/libft/ft_strrev.c.o: ../libft/ft_strrev.c
+CMakeFiles/Fillit.dir/libft/ft_strrev.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_strsplit.c.o: ../libft/ft_strsplit.c
 CMakeFiles/Fillit.dir/libft/ft_strsplit.c.o: ../libft/libft.h
@@ -188,6 +200,9 @@ CMakeFiles/Fillit.dir/libft/ft_tolower.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
 CMakeFiles/Fillit.dir/libft/ft_toupper.c.o: ../libft/libft.h
+
+CMakeFiles/Fillit.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
+CMakeFiles/Fillit.dir/libft/get_next_line.c.o: ../libft/libft.h
 
 CMakeFiles/Fillit.dir/main.c.o: ../fillit.h
 CMakeFiles/Fillit.dir/main.c.o: ../libft/libft.h
