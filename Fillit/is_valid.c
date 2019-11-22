@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_valid.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 11:22:48 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/22 14:42:27 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft/libft.h"
+
 #include "fillit.h"
 
-uint128_t work_with_tetri(char *content)
+/*
+**"work with tetri" - func, which makes a char to int.
+**"move tetro" moves tetra in top left corner,
+**"check_tetramino" has a list of right tetras and check new number on it.
+*/
+
+t_uint128_t	work_with_tetri(char *content)
 {
-	uint128_t	tmp;
+	t_uint128_t	tmp;
 	int			j;
 
 	j = 15;
@@ -34,7 +40,7 @@ uint128_t work_with_tetri(char *content)
 	return (tmp);
 }
 
-int correct_chars(char *buf)
+int			correct_chars(char *buf)
 {
 	int i;
 	int count;
@@ -45,7 +51,7 @@ int correct_chars(char *buf)
 	{
 		if (buf && buf[i] != '\n' && buf[i] != '.' && buf[i] != '#')
 			return (0);
-		if (buf[i] == '\n' && !(((i + 1) % 5)== 0))
+		if (buf[i] == '\n' && !(((i + 1) % 5) == 0))
 			return (0);
 		if (buf[i] == '#')
 			count++;
@@ -54,16 +60,16 @@ int correct_chars(char *buf)
 	return (count);
 }
 
-int river_check(char *buf)
+int			river_check(char *buf)
 {
 	int i;
 	int count;
 
-	 i = 0;
-	 count = 0;
-	 while (i < 19)
-	 {
-	 	if (buf[i] == '#')
+	i = 0;
+	count = 0;
+	while (i < 19)
+	{
+		if (buf[i] == '#')
 		{
 			if (i + 1 <= 18 && buf[i + 1] == '#')
 				count++;
@@ -74,12 +80,17 @@ int river_check(char *buf)
 			if (i - 5 >= 0 && buf[i - 5] == '#')
 				count++;
 		}
-	 	i++;
-	 }
+		i++;
+	}
 	return (count);
 }
 
-int is_valid(char *buf, int size, uint128_t *t)
+/*
+** is valid checks, that we have right sq and tetramins,
+** then it put them in mas of tetras (*t)
+*/
+
+int			is_valid(char *buf, int size, t_uint128_t *t)
 {
 	int		i;
 
@@ -91,22 +102,24 @@ int is_valid(char *buf, int size, uint128_t *t)
 		if (river_check(buf + i) != 6 && river_check(buf + i) != 8)
 			return (0);
 		*t = work_with_tetri(buf + i);
-//		printf("t = %llu\n", *t);
 		t++;
-		i+= 21;
+		i += 21;
 	}
 	return (1);
 }
 
-int parser(char *filename, uint128_t *t)
+/*
+** 26 tetas * 21 symbs = 546, but we begin from 0, so 545
+*/
+
+int			parser(char *filename, t_uint128_t *t)
 {
-	char	buff[545]; /*26 тетраминок * 21 символ = 546, но начинаем с 0, поэтому 545*/
+	char	buff[545];
 	int		ret;
 	int		fd;
 
 	if ((fd = open(filename, O_RDONLY)) < 0)
 		return (write(1, "No file with such name.\n", 24));
-
 	ret = read(fd, buff, 545);
 	if (close(fd) == -1)
 		return (write(1, "error: close fd\n", 16));
