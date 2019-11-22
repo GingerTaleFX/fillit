@@ -6,17 +6,17 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:04:02 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/22 11:13:00 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/22 14:42:27 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			ft_move(uint128_t *tetra, int y)
+int			ft_move(t_uint128_t *tetra, int y)
 {
-	uint128_t	right;
-	uint128_t	left;
-	uint128_t	bottom;
+	t_uint128_t	right;
+	t_uint128_t	left;
+	t_uint128_t	bottom;
 
 	right = make_right(y);
 	left = make_left(y);
@@ -34,7 +34,7 @@ int			ft_move(uint128_t *tetra, int y)
 	return (1);
 }
 
-int			func1(uint128_t map, uint128_t *tetra, int y)
+int			func1(t_uint128_t map, t_uint128_t *tetra, int y)
 {
 	if (!(*tetra))
 		return (1);
@@ -51,9 +51,9 @@ int			func1(uint128_t map, uint128_t *tetra, int y)
 	}
 }
 
-void		func2(uint128_t *tetra, int *y)
+void		func2(t_uint128_t *tetra, int *y)
 {
-	uint128_t	map;
+	t_uint128_t	map;
 	int			i;
 
 	map = 0;

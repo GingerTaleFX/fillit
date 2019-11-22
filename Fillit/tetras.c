@@ -6,15 +6,15 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/22 13:53:16 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:27:15 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int			check_tetramino(uint128_t src)
+int			check_tetramino(t_uint128_t src)
 {
-	static uint128_t	s_tetramins[19] = {58368, 35968, 19968, 19520, 52224,\
+	static t_uint128_t	s_tetramins[19] = {58368, 35968, 19968, 19520, 52224,\
 								34952, 61440,\
 								51328, 57856, 50240, 36352, 17600, \
 								35008, 11776, 59392, \
@@ -32,10 +32,10 @@ int			check_tetramino(uint128_t src)
 ** move_tetro moves a tetro to left top corner.
 */
 
-uint128_t	move_tetro(uint128_t tmp, int y)
+t_uint128_t	move_tetro(t_uint128_t tmp, int y)
 {
-	uint128_t	top;
-	uint128_t	left;
+	t_uint128_t	top;
+	t_uint128_t	left;
 	int			i;
 
 	i = y * y;
@@ -44,9 +44,9 @@ uint128_t	move_tetro(uint128_t tmp, int y)
 	while (--i >= 0)
 	{
 		if (i >= y * (y - 1))
-			top |= ((uint128_t)1 << i);
+			top |= ((t_uint128_t)1 << i);
 		if (!((i + 1) % y))
-			left |= ((uint128_t)1 << i);
+			left |= ((t_uint128_t)1 << i);
 	}
 	while ((left & tmp) == 0)
 		tmp <<= 1;
@@ -60,7 +60,7 @@ uint128_t	move_tetro(uint128_t tmp, int y)
 ** we need this func for 1 and 2 tetras for making small maps.
 */
 
-int			count_lines(uint128_t *tetra)
+int			count_lines(t_uint128_t *tetra)
 {
 	int i;
 	int line;
@@ -81,7 +81,9 @@ int			count_lines(uint128_t *tetra)
 		return (2);
 	if (i < 3 && line == 1)
 		return (4);
-	else if (i > 1)
+	if (i == 1)
+		return (3);
+	if (i > 1)
 		return (ft_sqrt(i * 4));
 	return (0);
 }
@@ -90,12 +92,12 @@ int			count_lines(uint128_t *tetra)
 ** Make tetras bigger, if there are more then 4*
 */
 
-uint128_t	*resize_tetras(uint128_t *tetra, int y, int counter)
+t_uint128_t	*resize_tetras(t_uint128_t *tetra, int y, int counter)
 {
 	int			i;
 	int			j;
 	int			c;
-	uint128_t	tmp;
+	t_uint128_t	tmp;
 
 	c = 0;
 	while (*tetra)
@@ -118,12 +120,12 @@ uint128_t	*resize_tetras(uint128_t *tetra, int y, int counter)
 	return (tetra - c);
 }
 
-uint128_t	*small_tetra(uint128_t *tetra, int y)
+t_uint128_t	*small_tetra(t_uint128_t *tetra, int y)
 {
 	int			i;
 	int			j;
 	int			c;
-	uint128_t	tmp;
+	t_uint128_t	tmp;
 
 	c = 0;
 	while (tetra[c])

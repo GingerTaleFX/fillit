@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/22 13:03:04 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/22 14:42:27 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 **"check_tetramino" has a list of right tetras and check new number on it.
 */
 
-uint128_t	work_with_tetri(char *content)
+t_uint128_t	work_with_tetri(char *content)
 {
-	uint128_t	tmp;
+	t_uint128_t	tmp;
 	int			j;
 
 	j = 15;
@@ -90,7 +90,7 @@ int			river_check(char *buf)
 ** then it put them in mas of tetras (*t)
 */
 
-int			is_valid(char *buf, int size, uint128_t *t)
+int			is_valid(char *buf, int size, t_uint128_t *t)
 {
 	int		i;
 
@@ -112,7 +112,7 @@ int			is_valid(char *buf, int size, uint128_t *t)
 ** 26 tetas * 21 symbs = 546, but we begin from 0, so 545
 */
 
-int			parser(char *filename, uint128_t *t)
+int			parser(char *filename, t_uint128_t *t)
 {
 	char	buff[545];
 	int		ret;
