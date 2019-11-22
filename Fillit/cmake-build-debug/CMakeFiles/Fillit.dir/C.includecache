@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/mdirect/Desktop/Fillit/algos.c
-fillit.h
-/Users/mdirect/Desktop/Fillit/fillit.h
-
-/Users/mdirect/Desktop/Fillit/fillit.h
-stdio.h
+/Users/kroselin/CLionProjects/Fillit/fillit.h
+stdlib.h
 -
-libft/libft.h
-/Users/mdirect/Desktop/Fillit/libft/libft.h
 sys/types.h
 -
 unistd.h
@@ -26,11 +20,7 @@ sys/stat.h
 fcntl.h
 -
 
-/Users/mdirect/Desktop/Fillit/libft/libft.h
-stdlib.h
--
-unistd.h
--
-string.h
--
+/Users/kroselin/CLionProjects/Fillit/tetras.c
+fillit.h
+/Users/kroselin/CLionProjects/Fillit/fillit.h
 

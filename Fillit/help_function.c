@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 11:11:14 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/22 11:11:14 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/22 12:54:23 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,33 @@ uint128_t	make_right(int y)
 		if (!(i % y))
 			right |= ((uint128_t)1 << i);
 	return (right);
+}
+
+int			ft_sqrt(int i)
+{
+	int k;
+	int res;
+
+	if (i >= 0)
+	{
+		k = 0;
+		res = 0;
+		while (res < i)
+		{
+			res = res + (2 * k + 1);
+			k++;
+		}
+		return (k);
+	}
+	return (-1);
+}
+
+void		ft_bzero(void *s, size_t n)
+{
+	while (n)
+	{
+		*((unsigned char*)s) = '\0';
+		s++;
+		n--;
+	}
 }
