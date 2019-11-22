@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/mdirect/Desktop/Fillit/algos.c
+fillit.h
+/Users/mdirect/Desktop/Fillit/fillit.h
+
 /Users/mdirect/Desktop/Fillit/fillit.h
 stdio.h
 -
@@ -35,8 +39,4 @@ sys/stat.h
 -
 fcntl.h
 -
-
-/Users/mdirect/Desktop/Fillit/tetras.c
-fillit.h
-/Users/mdirect/Desktop/Fillit/fillit.h
 

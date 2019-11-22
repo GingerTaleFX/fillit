@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 11:37:15 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 16:16:23 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/21 21:50:32 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,19 @@ uint128_t move_tetro(uint128_t tmp, int y)
 int count_lines(uint128_t *tetra)
 {
 	int i;
+	int j;
 
 	i = 0;
 	while (tetra[i])
+	{
+		if (tetra[i] == 34952 || tetra[i] == 61440)
+			j = 1;
 		i++;
+	}
 	if (i == 1)
 		return (1);
+	else if (i == 2 && j == 1)
+		return (4);
 	else if (i == 2)
 		return (3);
 	else if (i >= 3 && i <= 4)
@@ -117,27 +124,34 @@ uint128_t *resize_tetras(uint128_t *tetra, int y, int counter)
 	return (tetra - c);
 }
 
-int *small_tetra(uint128_t *tetra, int y)
+uint128_t	*small_tetra(uint128_t *tetra, int y)
 {
-	int i;
-	int j;
-	uint128_t tmp;
+	int			i;
+	int			j;
+	int 		c;
+	uint128_t	tmp;
 
-	while (ft_move(tetra, y))
-		continue;
-
+	c = 0;
 	while (*tetra)
 	{
-		tmp = 0;
-		i = y;
-		while (--i > 0)
+		i = 4;
+		while(i > y)
 		{
-			tmp += (*tetra >> (y * (i - 1))) << ((y - 1) * (i - 1));
-			*tetra -= (*tetra >> ((y * (i - 1)) - 1)) << ((y * (i - 1)) - 1);
+			while (ft_move(tetra, i))
+				continue;
+			j = 0;
+			tmp = 0;
+			while (*tetra)
+			{
+				tmp += (*tetra - ((*tetra >> i) << i)) << (j * (i - 1));
+				*tetra = *tetra >> i;
+				j++;
+			}
+			*tetra = tmp;
+			i--;
 		}
-		tmp += *tetra;
 		tetra++;
+		c++;
 	}
-//	*tetra = tmp;
-	return (tetra);
+	return (tetra - c);
 }

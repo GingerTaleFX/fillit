@@ -6,7 +6,7 @@
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 17:04:02 by mdirect           #+#    #+#             */
-/*   Updated: 2019/11/21 13:30:29 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/11/21 21:38:52 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,34 +74,11 @@ void		func2(uint128_t *tetra, int *y)
 	while (!(func1(map, tetra, *y)) /* && *y < 16 */)
 	{
 		map = 0;
-
-		i = -1;
-		while (++i < 26 && tetra[i])
-		{
-			printf("tetra[%d] = %llu\n", i, tetra[i]);
-			ft_print_bit(tetra[i], *y);
-		}
-
 		i = -1;
 		while (++i < 26 && tetra[i])
 			tetra[i] = move_tetro(tetra[i], *y);
-
-		i = -1;
-		while (++i < 26 && tetra[i])
-		{
-			printf("tetra[%d] = %llu\n", i, tetra[i]);
-			ft_print_bit(tetra[i], *y);
-		}
-
 		*y = *y + 1;
 		tetra = resize_tetras(tetra, *y, 2);
-
-		i = -1;
-		while (++i < 26 && tetra[i])
-		{
-			printf("tetra[%d] = %llu\n", i, tetra[i]);
-			ft_print_bit(tetra[i], *y);
-		}
 	}
 	ft_print_map(tetra, *y);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 17:13:47 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Created: 2019/09/06 12:54:50 by mdirect           #+#    #+#             */
+/*   Updated: 2019/10/10 12:10:26 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
+	char	*new;
 	size_t	i;
-	int		a;
+	size_t	j;
 
-	if (!s1 || !s2)
-		return (0);
-	i = ft_strlen(s1) + ft_strlen(s2);
-	if (!(str = (char *)malloc((sizeof(str)) * (i + 1))))
-		return (0);
-	a = 0;
-	while (*s1 != '\0')
+	if (ft_strlen(s1) + ft_strlen(s2) == SIZE_MAX)
+		return (NULL);
+	if (!s1 || !s2 || !(new = (char*)malloc(sizeof(char) *
+			(ft_strlen(s1) + ft_strlen(s2) + 1))))
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		str[a++] = *s1;
-		s1++;
+		new[i] = s1[i];
+		i++;
 	}
-	while (*s2 != '\0')
+	j = 0;
+	while (s2[j])
 	{
-		str[a++] = *s2;
-		s2++;
+		new[i + j] = s2[j];
+		j++;
 	}
-	str[a] = '\0';
-	return (str);
+	new[i + j] = '\0';
+	return (new);
 }

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnlen.c                                       :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 15:57:11 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Created: 2019/09/15 20:22:06 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/15 20:25:02 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(const char *src, size_t maxlen)
+int		ft_min(int a, int b)
 {
-	size_t	len;
-	int		i;
-
-	i = 0;
-	len = 0;
-	while (src[i] != '\0' && maxlen > 0)
-	{
-		i++;
-		len++;
-		maxlen--;
-	}
-	return (len);
+	return ((a < b) ? a : b);
 }

@@ -3,46 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 12:51:25 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Created: 2019/09/12 18:58:58 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/17 19:45:23 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	min_max(int n)
+int		ft_atoi(const char *str)
 {
-	if (n == -1)
+	unsigned long long	n;
+	int					sign;
+
+	n = 0;
+	sign = 1;
+	while (*str && (((*str) >= 9 && (*str) <= 13) || *str == 32))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		sign = (*str == '-') ? -1 : 1;
+		str++;
+	}
+	while (ft_isdigit(*str))
+	{
+		n = n * 10 + (*str - '0');
+		str++;
+	}
+	if (n > (long long)9223372036854775807 && sign == 1)
+		return (-1);
+	if (n > (long long)9223372036854775807 && sign == -1)
 		return (0);
-	else
-		return (n * (-1));
-}
-
-int			ft_atoi(const char *str)
-{
-	unsigned long		res;
-	int					n;
-
-	res = 0;
-	n = 1;
-	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' ||
-					*str == '\v' || *str == '\f' || *str == '\r'))
-		++str;
-	if (*str == '-')
-	{
-		n = -1;
-		str++;
-	}
-	else if (*str == '+')
-		str++;
-	while (*str && *str >= '0' && *str <= '9')
-	{
-		res = res * 10 + (*str - 48);
-		if (res > 4294967295)
-			return (min_max(n));
-		++str;
-	}
-	return (res * n);
+	return ((int)(n * sign));
 }

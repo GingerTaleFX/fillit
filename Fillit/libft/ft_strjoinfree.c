@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strjoinfree.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 23:19:53 by mdirect           #+#    #+#             */
-/*   Updated: 2019/09/10 23:21:35 by mdirect          ###   ########.fr       */
+/*   Created: 2019/10/12 17:55:39 by mdirect           #+#    #+#             */
+/*   Updated: 2019/10/12 17:55:39 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+char	*ft_strjoinfree(char *s1, char *s2, int k)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	char	*new;
+
+	new = ft_strjoin(s1, s2);
+	if (k == 1 || k == 3)
+	{
+		free(s1);
+		s1 = NULL;
+	}
+	if (k == 2 || k == 3)
+	{
+		free(s2);
+		s2 = NULL;
+	}
+	return (new);
 }

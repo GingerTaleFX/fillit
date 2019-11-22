@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mdirect <mdirect@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 14:25:55 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/16 22:05:03 by null             ###   ########.fr       */
+/*   Created: 2019/09/11 12:39:50 by mdirect           #+#    #+#             */
+/*   Updated: 2019/09/28 22:16:50 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,16 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char	*dst;
-	int		i;
-	size_t	l;
+	size_t nn;
+	size_t i;
 
+	nn = ft_strlen(s1);
 	i = 0;
-	l = 0;
-	dst = s1;
-	while (s1[l] != '\0')
+	while (s2[i] && i < n)
 	{
-		dst[i] = s1[l];
-		i++;
-		l++;
-	}
-	l = 0;
-	while (l < n && s2[l] != '\0')
-	{
-		dst[i] = s2[l];
-		l++;
+		s1[nn + i] = s2[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	s1[nn + i] = '\0';
+	return (s1);
 }

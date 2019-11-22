@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/21 16:07:33 by kroselin         ###   ########.fr       */
+/*   Updated: 2019/11/21 21:43:43 by mdirect          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int 	main(int ac, char **av)
 	uint128_t	map;
 
 	y = 0;
-	av[1] = "test_5.txt";
+	av[1] = "test_1.txt";
 	ac = 2;
 
 	if (ac != 2)
@@ -37,15 +37,7 @@ int 	main(int ac, char **av)
 	if ((y = count_lines(tetramins)) > 26)
 		ft_putstr ("Too many tetraminos\n");
 
-//	i = -1;
-//	while (++i < 26 && tetramins[i])
-//	{
-//		printf("tetra[%d] = %llu\n", i, tetramins[i]);
-////		ft_print_bit(tetramins[i], y);
-//	}
-
-
-	if(y == 1)
+	if (y == 1)
 	{
 		if (tetramins[0] == 52224)
 		{
@@ -54,7 +46,7 @@ int 	main(int ac, char **av)
 		}
 
 		else if (tetramins[0] == 34952 || tetramins[0] == 61440)
-			ft_print_map(tetramins, 3);
+			ft_print_map(tetramins, 4);
 		else
 		{
 			tetramins = small_tetra(tetramins, 4);
@@ -68,14 +60,13 @@ int 	main(int ac, char **av)
 		func2(tetramins, &y);
 	}
 	else
+	{
+		tetramins = small_tetra(tetramins, y);
+		i = -1;
+		while (++i < 26 && tetramins[i])
+			tetramins[i] = move_tetro(tetramins[i], y);
 		func2(tetramins, &y);
-//	i = -1;
-//	while (++i < 26 && tetramins[i])
-//	{
-//		printf("tetra[%d] = %llu\n", i, tetramins[i]);
-//		ft_print_bit(tetramins[i], y);
-//	}
-
+	}
 
 
 //	i = -1;
@@ -85,6 +76,5 @@ int 	main(int ac, char **av)
 //		ft_print_bit(tetramins[i], y);
 //	}
 //	free(tetramins);
-//	ft_print_map(tetramins, y);
 	return (0);
 }
