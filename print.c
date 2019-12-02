@@ -12,24 +12,6 @@
 
 #include "fillit.h"
 
-void	ft_print_bit(t_uint128_t n, int y)
-{
-	int i;
-
-	i = y * y - 1;
-	while (i >= 0)
-	{
-		if (n & ((t_uint128_t)1 << i))
-			write(1, "#", 1);
-		else
-			write(1, ".", 1);
-		if (i % y == 0)
-			write(1, "\n", 1);
-		i--;
-	}
-	write(1, "\n", 1);
-}
-
 void	ft_print_map(t_uint128_t *tetra, int y)
 {
 	int			i;
@@ -56,4 +38,5 @@ void	ft_print_map(t_uint128_t *tetra, int y)
 			write(1, "\n", 1);
 		i--;
 	}
+	write(1, "\n", 1);
 }

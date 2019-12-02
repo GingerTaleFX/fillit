@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 14:22:38 by kroselin          #+#    #+#             */
-/*   Updated: 2019/11/22 14:42:27 by mdirect          ###   ########.fr       */
+/*   Updated: 2019/12/02 12:19:06 by kroselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,17 @@ int			correct_chars(char *buf)
 
 	i = 0;
 	count = 0;
-	while (i < 19)
+	while (i <= 19)
 	{
 		if (buf && buf[i] != '\n' && buf[i] != '.' && buf[i] != '#')
 			return (0);
 		if (buf[i] == '\n' && !(((i + 1) % 5) == 0))
 			return (0);
-		if (buf[i] == '#')
+		if (buf[i] == '#' || buf[i] == '\n')
 			count++;
 		i++;
 	}
+	count /= 2;
 	return (count);
 }
 
